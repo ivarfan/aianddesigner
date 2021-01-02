@@ -190,6 +190,7 @@ $(document).ready(function() {
 
     });
 */
+
     $(".dropdowncontainer").click(function(event){
         if (event.target !== event.currentTarget) {
             var tapped = $(this).attr("id");
@@ -199,11 +200,12 @@ $(document).ready(function() {
         let items = tapped.split("-");
         let section = items[0];
         let attribute = items[1];
-        $("#" + tapped).toggleClass("noHover");
+        /*$("#" + tapped).toggleClass("noHover");*/
         $("#" + tapped).toggleClass("selected");
         $("#" + tapped + "-list").slideToggle(250, "easeOutCubic");
         $("#" + tapped + "-arrow").animateRotate(0, 180, 250, "easeOutCubic");
     });
+
     $(".dropdownoptioncontainer").click(function(event) {
         if (event.target !== event.currentTarget) {
             var tapped = $(this).attr("id");
@@ -227,6 +229,5 @@ $(document).ready(function() {
 
         $("." + section).fadeOut(200, "easeOutCubic");
         setTimeout(function() {$("." + section).css(attribute, value).fadeIn(200, "easeOutCubic");}, 200);
-
     });
 });
