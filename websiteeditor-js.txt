@@ -169,28 +169,6 @@ $(document).ready(function() {
         }
     };
 
-/*
-    $.each(style, function(change_obj, values) {
-        $.each(values, function(change_atttribute, val) {
-            $("." + change_obj).css(change_atttribute, val);
-        });
-    });
-
-    $("#").click(function(event) {
-        let tapped = event.target.id;
-        let res = tapped.split("_");
-        let classname = res[0];
-        let attribute = res[1];
-        let value = res[2];
-        style[classname][attribute] = value;
-        $("." + classname).animate({backgroundColor: "rgba(100, 100, 210, 100)"}, 100);
-        $("." + classname).fadeOut(200, "linear");
-        setTimeout(function() {$("." + classname).css(attribute, value).fadeIn(200, "linear");}, 200);
-        $("." + classname).animate({backgroundColor: "rgba(100, 100, 210, 100)"}, 0);
-
-    });
-*/
-
     $(".dropdowncontainer").click(function(event){
         if (event.target !== event.currentTarget) {
             var tapped = $(this).attr("id");
@@ -200,8 +178,8 @@ $(document).ready(function() {
         let items = tapped.split("-");
         let section = items[0];
         let attribute = items[1];
-        $("#" + tapped).toggleClass("noHover");
-        $("#" + tapped).toggleClass("selected");
+        /*$("#" + tapped).toggleClass("noHover");*/
+        /*$("#" + tapped).toggleClass("selected");*/
         $("#" + tapped + "-list").slideToggle(250, "easeOutCubic");
         $("#" + tapped + "-arrow").animateRotate(0, 180, 250, "easeOutCubic");
     });
@@ -229,5 +207,9 @@ $(document).ready(function() {
 
         $("." + section).fadeOut(200, "easeOutCubic");
         setTimeout(function() {$("." + section).css(attribute, value).fadeIn(200, "easeOutCubic");}, 200);
+    });
+
+    $(".popup").on('blur',function(){
+        $(this).fadeOut(300);
     });
 });
