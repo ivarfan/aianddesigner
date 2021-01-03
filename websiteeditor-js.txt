@@ -179,7 +179,7 @@ $(document).ready(function() {
         let section = items[0];
         let attribute = items[1];
         /*$("#" + tapped).toggleClass("noHover");*/
-        /*$("#" + tapped).toggleClass("selected");*/
+        $("#" + tapped).toggleClass("selected");
         $("#" + tapped + "-list").slideToggle(250, "easeOutCubic");
         $("#" + tapped + "-arrow").animateRotate(0, 180, 250, "easeOutCubic");
     });
@@ -203,7 +203,7 @@ $(document).ready(function() {
         $("#" + section + "-" + attribute + "-list").slideToggle(250, "easeOutCubic");
         $("#" + section + "-" + attribute + "-arrow").animateRotate(180, 360, 250, "easeOutCubic");
         $("#" + section + "-" + attribute).toggleClass("selected");
-        $("#" + section + "-" + attribute).toggleClass("noHover");
+        /*$("#" + section + "-" + attribute).toggleClass("noHover");*/
 
         $("." + section).fadeOut(200, "easeOutCubic");
         setTimeout(function() {$("." + section).css(attribute, value).fadeIn(200, "easeOutCubic");}, 200);
