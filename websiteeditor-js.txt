@@ -183,6 +183,7 @@ $(document).ready(function() {
         $("#" + tapped + "-list").slideToggle(250, "easeOutCubic");
         $("#" + tapped + "-arrow").animateRotate(0, 180, 250, "easeOutCubic");
         $("#" + tapped + "-closing").css("display", "block");
+        console.log($("#" + tapped + "-closing").css("display"));
     });
 
     $(".dropdownoptioncontainer").click(function(event) {
