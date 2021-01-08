@@ -169,6 +169,8 @@ $(document).ready(function() {
         }
     };
 
+    $(".DropdownList").attr("tabindex", "-1");
+
     var openeddropdown = "";
 
     $(".dropdowncontainer").click(function(event){
