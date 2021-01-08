@@ -170,6 +170,7 @@ $(document).ready(function() {
     };
 
     $(".DropdownList").attr("tabindex", "-1");
+    $(".DropdownList").css("outline", "0");
 
     var openeddropdown = "";
 
