@@ -169,8 +169,7 @@ $(document).ready(function() {
         }
     };
 
-    $(".dropdowncontainer").click(function(event){
-        event.preventDefault();
+    $(".dropdowncontainer").click(function(event) {
         if (event.target !== event.currentTarget) {
             var tapped = $(this).attr("id");
         } else {
@@ -183,6 +182,7 @@ $(document).ready(function() {
         $("#" + tapped).toggleClass("selected");
         $("#" + tapped + "-list").slideToggle(250, "easeOutCubic");
         $("#" + tapped + "-arrow").animateRotate(0, 180, 250, "easeOutCubic");
+        $("#" + tapped + "-closing").css("display", "block");
     });
 
     $(".dropdownoptioncontainer").click(function(event) {
@@ -209,5 +209,20 @@ $(document).ready(function() {
         $("." + section).fadeOut(200, "easeOutCubic");
         setTimeout(function() {$("." + section).css(attribute, value).fadeIn(200, "easeOutCubic");}, 200);
     });
+
+    $(".closing").click(function(event) {
+        if (event.target !== event.currentTarget) {
+            var tapped = $(this).attr("id");
+        } else {
+            var tapped = event.target.id;
+        }
+        let items = tapped.split("-");
+        let section = items[0];
+        let attribute = items[1];
+        $("#" + tapped).toggleClass("selected");
+        $("#" + tapped + "-list").slideToggle(250, "easeOutCubic");
+        $("#" + tapped + "-arrow").animateRotate(180, 360, 250, "easeOutCubic");
+        $("#" + tapped + "-closing").css("display", "none");
+    }
 
 });
