@@ -224,6 +224,6 @@ $(document).ready(function() {
         $("#" + tapped + "-list").slideToggle(250, "easeOutCubic");
         $("#" + tapped + "-arrow").animateRotate(180, 360, 250, "easeOutCubic");
         $("#" + tapped + "-closing").css("display", "none");
-    }
+    });
 
 });
