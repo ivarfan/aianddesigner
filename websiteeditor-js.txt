@@ -220,10 +220,11 @@ $(document).ready(function() {
         let items = tapped.split("-");
         let section = items[0];
         let attribute = items[1];
-        $("#" + tapped).toggleClass("selected");
-        $("#" + tapped + "-list").slideToggle(250, "easeOutCubic");
-        $("#" + tapped + "-arrow").animateRotate(180, 360, 250, "easeOutCubic");
-        $("#" + tapped + "-closing").css("display", "none");
+        let object = section + "-" + attribute;
+        $("#" + object).toggleClass("selected");
+        $("#" + object + "-list").slideToggle(250, "easeOutCubic");
+        $("#" + object + "-arrow").animateRotate(180, 360, 250, "easeOutCubic");
+        $("#" + object + "-closing").css("display", "none");
     });
 
 });
