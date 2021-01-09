@@ -1,5 +1,9 @@
 *:focus {
     outline: none;
+    border-top-color: #005dd6;
+    border-bottom-color: #005dd6;
+    border-right-color: #005dd6;
+    border-left-color: #005dd6;
 }
 
 @media (hover: hover) and (pointer: fine) {
