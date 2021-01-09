@@ -217,6 +217,8 @@ $(document).ready(function() {
         } else {
             var tapped = event.target.id;
         }
+        console.log(event.target);
+        console.log(event.currentTarget);
         let items = tapped.split("-");
         let section = items[0];
         let attribute = items[1];
