@@ -182,7 +182,7 @@ $(document).ready(function() {
         /*$("#" + tapped).toggleClass("selected");*/
         $("#" + tapped).attr("tabindex", 0).focus();
         /*$("#" + tapped + "-list").slideToggle(250, "easeOutCubic");*/
-        $("#" + tapped + "-list").show().animate({
+        $("#" + tapped + "-list").animate({
               top: "+=24px",
               opacity: "show",
               height: "show"
@@ -210,11 +210,11 @@ $(document).ready(function() {
         }
         $("#" + object).blur();
         /*$("#" + object + "-list").slideToggle(250, "easeOutCubic");*/
-        $("#" + tapped + "-list").animate({
+        $("#" + object + "-list").animate({
               top: "-=24px",
               opacity: "hide",
               height: "hide"
-        }).hide();
+        });
         $("#" + object + "-arrow").animateRotate(180, 360, 250, "easeOutCubic");
         $("#" + object + "-closing").css("display", "none");
         $("." + section).fadeOut(200, "easeOutCubic");
@@ -235,11 +235,11 @@ $(document).ready(function() {
         let object = section + "-" + attribute;
         $("#" + object).blur();
         /*$("#" + object + "-list").slideToggle(250, "easeOutCubic");*/
-        $("#" + tapped + "-list").animate({
+        $("#" + object + "-list").animate({
               top: "-=24px",
               opacity: "hide",
               height: "hide"
-        }).hide();
+        });
         $("#" + object + "-arrow").animateRotate(180, 360, 250, "easeOutCubic");
         $("#" + object + "-closing").css("display", "none");
     });
