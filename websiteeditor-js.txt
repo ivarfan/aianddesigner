@@ -183,7 +183,7 @@ $(document).ready(function() {
         $("#" + tapped).attr("tabindex", 0).focus();
         /*$("#" + tapped + "-list").slideToggle(250, "easeOutCubic");*/
         $("#" + tapped + "-list").animate({
-              top: "+=8px",
+              top: "+=22px",
               opacity: "show",
               height: "show"
         }, 250, "easeOutCubic");
@@ -211,7 +211,7 @@ $(document).ready(function() {
         $("#" + object).blur();
         /*$("#" + object + "-list").slideToggle(250, "easeOutCubic");*/
         $("#" + object + "-list").animate({
-              top: "-=8px",
+              top: "-=22px",
               opacity: "hide",
               height: "hide"
         }, 250, "easeOutCubic");
@@ -236,7 +236,7 @@ $(document).ready(function() {
         $("#" + object).blur();
         /*$("#" + object + "-list").slideToggle(250, "easeOutCubic");*/
         $("#" + object + "-list").animate({
-              top: "-=8px",
+              top: "-=22px",
               opacity: "hide",
               height: "hide"
         }, 250, "easeOutCubic");
