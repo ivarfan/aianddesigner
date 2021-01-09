@@ -180,7 +180,7 @@ $(document).ready(function() {
         let section = items[0];
         let attribute = items[1];
         /*$("#" + tapped).toggleClass("selected");*/
-        $("#" + tapped).attr("tabindex", -1).focus();
+        $("#" + tapped).attr("tabindex", 0).focus();
         $("#" + tapped + "-list").slideToggle(250, "easeOutCubic");
         $("#" + tapped + "-arrow").animateRotate(0, 180, 250, "easeOutCubic");
         $("#" + tapped + "-closing").css("display", "block");
@@ -203,7 +203,7 @@ $(document).ready(function() {
             $("#" + section + "-" + attribute + "-chosenicon").css("backgroundColor", $(this).children().not(".dropdownoption").css("backgroundColor"));
             value = color[value];
         }
-        $("#" + object).toggleClass("selected");
+        $("#" + object).blur();
         $("#" + object + "-list").slideToggle(250, "easeOutCubic");
         $("#" + object + "-arrow").animateRotate(180, 360, 250, "easeOutCubic");
         $("#" + object + "-closing").css("display", "none");
@@ -221,7 +221,7 @@ $(document).ready(function() {
         let section = items[0];
         let attribute = items[1];
         let object = section + "-" + attribute;
-        $("#" + object).toggleClass("selected");
+        $("#" + object).blur();
         $("#" + object + "-list").slideToggle(250, "easeOutCubic");
         $("#" + object + "-arrow").animateRotate(180, 360, 250, "easeOutCubic");
         $("#" + object + "-closing").css("display", "none");
