@@ -179,11 +179,9 @@ $(document).ready(function() {
         let items = tapped.split("-");
         let section = items[0];
         let attribute = items[1];
-        /*$("#" + tapped).toggleClass("selected");*/
         $("#" + tapped).attr("tabindex", 0).focus();
-        /*$("#" + tapped + "-list").slideToggle(250, "easeOutCubic");*/
         $("#" + tapped + "-list").animate({
-              top: "+=22px",
+              top: "+=13px",
               opacity: "show",
               height: "show"
         }, 250, "easeOutCubic");
@@ -209,9 +207,8 @@ $(document).ready(function() {
             value = color[value];
         }
         $("#" + object).blur();
-        /*$("#" + object + "-list").slideToggle(250, "easeOutCubic");*/
         $("#" + object + "-list").animate({
-              top: "-=22px",
+              top: "-=13px",
               opacity: "hide",
               height: "hide"
         }, 250, "easeOutCubic");
@@ -234,9 +231,8 @@ $(document).ready(function() {
         let attribute = items[1];
         let object = section + "-" + attribute;
         $("#" + object).blur();
-        /*$("#" + object + "-list").slideToggle(250, "easeOutCubic");*/
         $("#" + object + "-list").animate({
-              top: "-=22px",
+              top: "-=13px",
               opacity: "hide",
               height: "hide"
         }, 250, "easeOutCubic");
