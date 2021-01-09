@@ -183,10 +183,10 @@ $(document).ready(function() {
         $("#" + tapped).attr("tabindex", 0).focus();
         /*$("#" + tapped + "-list").slideToggle(250, "easeOutCubic");*/
         $("#" + tapped + "-list").animate({
-              top: "+=24px",
+              top: "+=8px",
               opacity: "show",
               height: "show"
-        });
+        }, 250, "easeOutCubic");
         $("#" + tapped + "-arrow").animateRotate(0, 180, 250, "easeOutCubic");
         $("#" + tapped + "-closing").css("display", "block");
     });
@@ -211,10 +211,10 @@ $(document).ready(function() {
         $("#" + object).blur();
         /*$("#" + object + "-list").slideToggle(250, "easeOutCubic");*/
         $("#" + object + "-list").animate({
-              top: "-=24px",
+              top: "-=8px",
               opacity: "hide",
               height: "hide"
-        });
+        }, 250, "easeOutCubic");
         $("#" + object + "-arrow").animateRotate(180, 360, 250, "easeOutCubic");
         $("#" + object + "-closing").css("display", "none");
         $("." + section).fadeOut(200, "easeOutCubic");
@@ -236,10 +236,10 @@ $(document).ready(function() {
         $("#" + object).blur();
         /*$("#" + object + "-list").slideToggle(250, "easeOutCubic");*/
         $("#" + object + "-list").animate({
-              top: "-=24px",
+              top: "-=8px",
               opacity: "hide",
               height: "hide"
-        });
+        }, 250, "easeOutCubic");
         $("#" + object + "-arrow").animateRotate(180, 360, 250, "easeOutCubic");
         $("#" + object + "-closing").css("display", "none");
     });
