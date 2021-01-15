@@ -1,7 +1,7 @@
 *:focus {
     outline: none;
     border-color: #005dd6;
-    box-shadow: inset 0 0 0 3px hsla(214, 100.00%, 42.00%, 0.28);
+    box-shadow: 0 0 0 3px hsla(214, 100.00%, 42.00%, 0.28);
 }
 
 @media (hover: hover) and (pointer: fine) {
