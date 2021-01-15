@@ -227,7 +227,6 @@ $(document).ready(function() {
         $("#" + object + "-closing").css("display", "none");
         $("." + section).fadeOut(200, "easeOutCubic");
         setTimeout(function() {$("." + section).css(attribute, value).fadeIn(200, "easeOutCubic");}, 200);
-        console.log($("." + section).css(attribute));
     });
 
     $(".closing").click(function(event) {
