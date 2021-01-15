@@ -201,7 +201,7 @@ $(document).ready(function() {
         let value = items[2];
         let object = section + "-" + attribute;
         style[section][attribute] = value;
-        $(this).parent().siblings().find(".dropdownoption").html($(this).find(".dropdownoption").html());
+        $(this).parent().parent().siblings().find(".dropdownoption").html($(this).find(".dropdownoption").html());
         if ((attribute.toLowerCase()).includes("color")) {
             $("#" + section + "-" + attribute + "-chosenicon").css("backgroundColor", $(this).children().not(".dropdownoption").css("backgroundColor"));
             value = color[value];
