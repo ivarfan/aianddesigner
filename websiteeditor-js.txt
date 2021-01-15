@@ -220,8 +220,7 @@ $(document).ready(function() {
         $("#" + object + "-arrow").animateRotate(180, 360, 250, "easeOutCubic");
         $("#" + object + "-closing").css("display", "none");
         $("." + section).fadeOut(200, "easeOutCubic");
-        setTimeout(function() {$("." + section).css(attribute, value).fadeIn(200, "easeOutCubic");}, 200);
-        console.log($("." + section).css(attribute));
+        setTimeout(function() {$("." + section).css(attribute, value).fadeIn(200, "easeOutCubic");console.log($("." + section).css(attribute));}, 200);
     });
 
     $(".closing").click(function(event) {
