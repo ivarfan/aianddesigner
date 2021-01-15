@@ -181,7 +181,7 @@ $(document).ready(function() {
         let attribute = items[1];
         $("#" + tapped).attr("tabindex", 0).focus();
         $("#" + tapped + "-list").animate({
-              top: "+=13px",
+              top: "+=7px",
               opacity: "show",
               height: "show"
         }, 300, "easeOutCubic");
@@ -208,7 +208,7 @@ $(document).ready(function() {
         }
         $("#" + object).blur();
         $("#" + object + "-list").animate({
-              top: "-=13px",
+              top: "-=7px",
               opacity: "hide",
               height: "hide"
         }, 300, "easeOutCubic");
@@ -232,7 +232,7 @@ $(document).ready(function() {
         let object = section + "-" + attribute;
         $("#" + object).blur();
         $("#" + object + "-list").animate({
-              top: "-=13px",
+              top: "-=7px",
               opacity: "hide",
               height: "hide"
         }, 300, "easeOutCubic");
