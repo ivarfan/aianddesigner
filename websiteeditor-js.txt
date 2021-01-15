@@ -160,7 +160,11 @@ $(document).ready(function() {
         "blackish" : "#2d2d2b",
         "breath" : "#eae6df",
         "wind" : "#b0b0b0",
-        "coral" : "#ff533d"
+        "coral" : "#ff533d",
+        "teal": "#0f8f8f",
+        "olive": "#686921",
+        "sea": "#1f478d",
+        "dew": "#91b3b7"
     };
 
 
