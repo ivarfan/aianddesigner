@@ -155,16 +155,16 @@ $(document).ready(function() {
     $("body").addClass("noselect");
 
     let color = {
-        "dustyrose" : "#d4c8b6",
-        "wheat" : "#b8926a",
-        "blackish" : "#2d2d2b",
-        "breath" : "#eae6df",
-        "wind" : "#b0b0b0",
-        "coral" : "#ff533d",
-        "teal": "#0f8f8f",
-        "olive": "#686921",
-        "sea": "#1f478d",
-        "dew": "#91b3b7"
+        "dustyrose" : "(212, 200, 182, ",
+        "wheat" : "(184, 146, 106, ",
+        "blackish" : "(45, 45, 43, ",
+        "breath" : "(234, 230, 223, ",
+        "wind" : "(176, 176, 176, ",
+        "coral" : "(255, 83, 61, ",
+        "teal": "(15, 143, 143, ",
+        "olive": "(104, 105, 33, ",
+        "sea": "(31, 71, 141, ",
+        "dew": "(145, 179, 183, "
     };
 
 
@@ -207,10 +207,15 @@ $(document).ready(function() {
         let object = section + "-" + attribute;
         style[section][attribute] = value;
         $(this).parent().parent().siblings().find(".dropdownoption").html($(this).find(".dropdownoption").html());
-        if ((attribute.toLowerCase()).includes("color")) {
+        if ((attribute.toLowerCase()).includes("backgroundcolor")) {
             $("#" + section + "-" + attribute + "-chosenicon").css("backgroundColor", $(this).children().not(".dropdownoption").css("backgroundColor"));
-            value = color[value];
-            console.log(value);
+            let opacity = style[section]["opacity"];
+            value = "rgba" + color[value] + opacity + ")";
+        }
+        if ((attribute.toLowerCase()).includes("opacity")) {
+            let colorname = style[section]["backgroundColor"];
+            value = "rgba" + color[colorname] + value + ")";
+            attribute = "backgroundColor";
         }
         $("#" + object).blur();
         $("#" + object + "-list").animate({
