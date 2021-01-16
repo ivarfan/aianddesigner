@@ -249,4 +249,10 @@ $(document).ready(function() {
         $("#" + object + "-closing").css("display", "none");
     });
 
+    $("#shrinkcustomwiz").click(function(event) {
+        $(".customizationwiz").animate({
+              left: "+=232px"
+        }, 300, "easeOutCubic");
+    });
+
 });
