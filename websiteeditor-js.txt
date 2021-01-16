@@ -190,7 +190,7 @@ $(document).ready(function() {
               opacity: "show",
               height: "show"
         }, 300, "easeOutCubic");
-        $("#" + tapped + "-arrow").animateRotate(0, 180, 250, "easeOutCubic");
+        $("#" + tapped + "-arrow").animateRotate(0, 180, 250, "easeInOutCubic");
         $("#" + tapped + "-closing").css("display", "block");
     });
 
@@ -222,10 +222,10 @@ $(document).ready(function() {
               top: "-=7px",
               opacity: "hide",
               height: "hide"
-        }, 300, "easeOutCubic");
-        $("#" + object + "-arrow").animateRotate(180, 360, 250, "easeOutCubic");
+        }, 300, "easeInCubic");
+        $("#" + object + "-arrow").animateRotate(180, 360, 250, "easeInOutCubic");
         $("#" + object + "-closing").css("display", "none");
-        $("." + section).fadeOut(200, "easeOutCubic");
+        $("." + section).fadeOut(200, "easeInCubic");
         setTimeout(function() {$("." + section).css(attribute, value).fadeIn(200, "easeOutCubic");}, 200);
     });
 
@@ -244,8 +244,8 @@ $(document).ready(function() {
               top: "-=7px",
               opacity: "hide",
               height: "hide"
-        }, 300, "easeOutCubic");
-        $("#" + object + "-arrow").animateRotate(180, 360, 250, "easeOutCubic");
+        }, 300, "easeInCubic");
+        $("#" + object + "-arrow").animateRotate(180, 360, 250, "easeInOutCubic");
         $("#" + object + "-closing").css("display", "none");
     });
 
