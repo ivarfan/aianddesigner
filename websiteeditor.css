@@ -16,6 +16,10 @@
     .dropdownoptioncontainer:hover {
       background-color: #f2f2f2;
     }
+
+    #shrinkcustomwiz:hover {
+      opacity: 0.12;
+    }
 }
 
 .selected {
