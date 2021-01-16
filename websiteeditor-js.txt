@@ -222,7 +222,7 @@ $(document).ready(function() {
               top: "-=7px",
               opacity: "hide",
               height: "hide"
-        }, 300, "easeInCubic");
+        }, 300, "easeOutCubic");
         $("#" + object + "-arrow").animateRotate(180, 360, 250, "easeInOutCubic");
         $("#" + object + "-closing").css("display", "none");
         $("." + section).fadeOut(200, "easeInCubic");
@@ -244,7 +244,7 @@ $(document).ready(function() {
               top: "-=7px",
               opacity: "hide",
               height: "hide"
-        }, 300, "easeInCubic");
+        }, 300, "easeOutCubic");
         $("#" + object + "-arrow").animateRotate(180, 360, 250, "easeInOutCubic");
         $("#" + object + "-closing").css("display", "none");
     });
