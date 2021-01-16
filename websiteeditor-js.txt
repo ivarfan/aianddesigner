@@ -252,7 +252,7 @@ $(document).ready(function() {
     $("#shrinkcustomwiz").click(function(event) {
         $(".customizationwiz").animate({
               left: "+=232px"
-        }, 500, "easeInOutQuint");
+        }, 700, "easeInOutCubic");
     });
 
 });
