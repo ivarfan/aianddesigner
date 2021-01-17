@@ -8,7 +8,7 @@ $(document).ready(function() {
 
     let customWizHeight = $(".minimizecontainer").height() + $(".customizationwizcontainer").height() + $(".completioncontainer").height();
     if (window.innerHeight < customWizHeight + 10) {
-        let newHeight = window.innerHeight - 20 - $(".minimizecontainer").height() - $(".completioncontainer").height();
+        let newHeight = window.innerHeight - 40 - $(".minimizecontainer").height() - $(".completioncontainer").height();
         $(".customizationwizcontainer").css("height", newHeight);
     }
 
