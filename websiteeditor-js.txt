@@ -2,10 +2,6 @@ $(document).ready(function() {
 
     /***easing functions***/
 
-    $( window ).css("height", "calc(100vh - calc(100vh - 100%))");
-     
-    $( document ).css("height", "calc(100vh - calc(100vh - 100%))");
-
     $.easing.jswing = $.easing.swing;
 
     $.extend($.easing,
