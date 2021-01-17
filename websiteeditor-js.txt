@@ -2,11 +2,9 @@ $(document).ready(function() {
 
     /***easing functions***/
 
-
-    $( window ).height($(window).height() - $(window).height() + 100%);
+    $( window ).css("height", "calc(100vh - calc(100vh - 100%))");
      
-
-    $( document ).height($(document).height() - $(document).height() + 100%);
+    $( document ).css("height", "calc(100vh - calc(100vh - 100%))");
 
     $.easing.jswing = $.easing.swing;
 
