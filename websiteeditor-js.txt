@@ -189,9 +189,9 @@ $(document).ready(function() {
         let section = items[0];
         let attribute = items[1];
         let listToOpen = "#" + tapped + "-list";
-        console.log($("#" + tapped + "-list").position().top + 194);
+        console.log(document.querySelector(listToOpen).getBoundingClientRect().bottom);
         console.log(window.innerHeight);
-        console.log($("#" + tapped + "-list").position().top + 194 >= window.innerHeight);
+        console.log(document.querySelector(listToOpen).getBoundingClientRect().bottom >= window.innerHeight);
         if (document.querySelector(listToOpen).getBoundingClientRect().bottom >= window.innerHeight) {
             let difference = document.querySelector(listToOpen).getBoundingClientRect().bottom - window.innerHeight + 6;
             let topPos = -44 - difference;
