@@ -16,13 +16,17 @@ $(document).ready(function() {
     var menuPadding = 28 + 10 + 10;
     document.body.style.height = window.innerHeight;
     $(window).resize(function() {
+        console.log($(".customizationwizcontainer").scrollHeight());
         document.body.style.height = window.innerHeight;
         let location = document.querySelector(".customizationwiz").getBoundingClientRect();
         console.log(location.top + "/" + window.innerHeight);
         if (location.top < 10) {
-            $(".customizationwiz").css("top", "10");
+            let newHeight = window.innerHeight - 30 - $(".minimizecontainer").height() - $(".completioncontainer").height();
+            console.log(newHeight);
+            $(".customizationwizcontainer").css("height", newHeight);
         } else {
-            $(".customizationwiz").css("top", "auto");
+            let newHeight = window.innerHeight - 30 - $(".minimizecontainer").height() - $(".completioncontainer").height();
+            $(".customizationwizcontainer").css("height", newHeight);
         }
     });
 
