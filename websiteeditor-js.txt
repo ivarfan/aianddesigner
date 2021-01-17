@@ -194,6 +194,7 @@ $(document).ready(function() {
         let items = tapped.split("-");
         let section = items[0];
         let attribute = items[1];
+        $("#" + tapped + "-list").css("left", document.querySelector("#" + tapped).getBoundingClientRect().left);
         if (document.querySelector("#" + tapped).getBoundingClientRect().top + 150 >= window.innerHeight) {
             let difference = document.querySelector("#" + tapped).getBoundingClientRect().top + 170 - window.innerHeight;
             let topPos = document.querySelector("#" + tapped).getBoundingClientRect().top - 44 - difference;
