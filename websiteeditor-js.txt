@@ -1,6 +1,6 @@
 
 $(document).ready(function() {
-
+/***
     window.onresize = function() {
         document.body.style.height = window.innerHeight;
     }
@@ -11,7 +11,7 @@ $(document).ready(function() {
         let newHeight = window.innerHeight - 40 - $(".minimizecontainer").height() - $(".completioncontainer").height();
         $(".customizationwizcontainer").css("height", newHeight);
     }
-
+***/
     $(window).resize(function() {
         window.onresize = function() {
                 document.body.style.height = window.innerHeight;
