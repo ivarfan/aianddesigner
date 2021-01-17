@@ -12,16 +12,15 @@ $(document).ready(function() {
         $(".customizationwizcontainer").css("height", newHeight);
     }
 ***/
+    var dropdownHeight = 48 + 9 + 20 + 20;
+    var menuPadding = 28 + 10 + 10;
     document.body.style.height = window.innerHeight;
     $(window).resize(function() {
-        console.log($(".customizationcontainer").get(1).height());
         document.body.style.height = window.innerHeight;
         let location = document.querySelector(".customizationwiz").getBoundingClientRect();
         console.log(location.top + "/" + window.innerHeight);
-        if (location.top < 10) {
-            let newHeight = window.innerHeight - 30 - $(".minimizecontainer").height() - $(".completioncontainer").height();
-            console.log(newHeight);
-            $(".customizationwizcontainer").css("height", newHeight);
+        if (location.top <= 10) {
+            $(".customizationwiz").css("top", "10");
         } else {
             let newHeight = window.innerHeight - 30 - $(".minimizecontainer").height() - $(".completioncontainer").height();
             $(".customizationwizcontainer").css("height", newHeight);
