@@ -12,6 +12,18 @@ $(document).ready(function() {
         $(".customizationwizcontainer").css("height", newHeight);
     }
 
+    $(window).resize(function() {
+        window.onresize = function() {
+                document.body.style.height = window.innerHeight;
+        }
+        window.onresize();
+        let customWizHeight = $(".minimizecontainer").height() + $(".customizationwizcontainer").height() + $(".completioncontainer").height();
+        if (window.innerHeight < customWizHeight + 10) {
+            let newHeight = window.innerHeight - 20 - $(".minimizecontainer").height() - $(".completioncontainer").height();
+            $(".customizationwizcontainer").css("height", newHeight);
+    }
+    });
+
     $.easing.jswing = $.easing.swing;
 
     $.extend($.easing,
