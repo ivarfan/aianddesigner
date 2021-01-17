@@ -197,9 +197,9 @@ $(document).ready(function() {
         console.log(document.querySelector("#nav-backgroundColor-coral").getBoundingClientRect().left);
         $("#" + tapped).attr("tabindex", 0).focus();
         $("#" + tapped + "-list").animate({
+              height: "show",
               top: "+=7px",
-              opacity: "show",
-              height: "show"
+              opacity: "show"
         }, 300, "easeOutCubic");
         $("#" + tapped + "-arrow").animateRotate(0, 180, 250, "easeInOutCubic");
         $("#" + tapped + "-closing").css("display", "block");
