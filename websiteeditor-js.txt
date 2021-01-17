@@ -194,16 +194,15 @@ $(document).ready(function() {
         let items = tapped.split("-");
         let section = items[0];
         let attribute = items[1];
-        $("#" + tapped + "-list").css("left", document.querySelector("#" + tapped).getBoundingClientRect().left);
-        if (document.querySelector("#" + tapped).getBoundingClientRect().top + 150 >= window.innerHeight) {
-            let difference = document.querySelector("#" + tapped).getBoundingClientRect().top + 170 - window.innerHeight;
-            let topPos = document.querySelector("#" + tapped).getBoundingClientRect().top - 44 - difference;
+        let location = document.querySelector("#" + tapped).getBoundingClientRect();
+        $("#" + tapped + "-list").css("left", location.left);
+        if (location.top + 150 >= window.innerHeight) {
+            let difference = location.top + 170 - window.innerHeight;
+            let topPos = location.top - 44 - difference;
             $("#" + tapped + "-list").css("top", topPos);
         } else {
-            $("#" + tapped + "-list").css("top", document.querySelector("#" + tapped).getBoundingClientRect().top - 44);
+            $("#" + tapped + "-list").css("top", location.top - 44);
         }
-        console.log(document.querySelector("#nav-backgroundColor-coral").getBoundingClientRect().top);
-        console.log(document.querySelector("#nav-backgroundColor-coral").getBoundingClientRect().left);
         $("#" + tapped).attr("tabindex", 0).focus();
         $("#" + tapped + "-list").animate({
               top: "+=7px",
@@ -211,7 +210,6 @@ $(document).ready(function() {
         }, 300, "easeOutCubic");
         $("#" + tapped + "-arrow").animateRotate(0, 180, 250, "easeInOutCubic");
         $("#" + tapped + "-closing").css("display", "block");
-        setTimeout(function() {console.log(document.querySelector("#nav-backgroundColor-coral").getBoundingClientRect().top);console.log(document.querySelector("#nav-backgroundColor-coral").getBoundingClientRect().left);}, 350);
     });
 
     $(".dropdownoptioncontainer").click(function(event) {
@@ -226,7 +224,7 @@ $(document).ready(function() {
         let value = items[2];
         let object = section + "-" + attribute;
         style[section][attribute] = value;
-        $(this).parent().parent().siblings().find(".dropdownoption").html($(this).find(".dropdownoption").html());
+        $("#" + object).find(".dropdownoption").html($(this).find(".dropdownoption").html());
         if ((attribute.toLowerCase()).includes("backgroundcolor")) {
             $("#" + section + "-" + attribute + "-chosenicon").css("backgroundColor", $(this).children().not(".dropdownoption").css("backgroundColor"));
             let opacity = style[section]["opacity"];
@@ -243,7 +241,6 @@ $(document).ready(function() {
               opacity: "hide",
               height: "hide"
         }, 300, "easeOutCubic");
-        setTimeout(function() {$("#" + object + "-list").css("top", "-44");}, 300);
         $("#" + object + "-arrow").animateRotate(180, 360, 250, "easeInOutCubic");
         $("#" + object + "-closing").css("display", "none");
         $("." + section).fadeOut(200, "easeInCubic");
@@ -266,7 +263,6 @@ $(document).ready(function() {
               opacity: "hide",
               height: "hide"
         }, 300, "easeOutCubic");
-        setTimeout(function() {$("#" + object + "-list").css("top", "-44");}, 300);
         $("#" + object + "-arrow").animateRotate(180, 360, 250, "easeInOutCubic");
         $("#" + object + "-closing").css("display", "none");
     });
