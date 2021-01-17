@@ -14,12 +14,16 @@ $(document).ready(function() {
 ***/
     document.body.style.height = window.innerHeight;
     $(window).resize(function() {
+        console.log($(".customizationcontainer").height());
         document.body.style.height = window.innerHeight;
         let location = document.querySelector(".customizationwiz").getBoundingClientRect();
         console.log(location.top + "/" + window.innerHeight);
         if (location.top < 10) {
             let newHeight = window.innerHeight - 30 - $(".minimizecontainer").height() - $(".completioncontainer").height();
             console.log(newHeight);
+            $(".customizationwizcontainer").css("height", newHeight);
+        } else {
+            let newHeight = window.innerHeight - 30 - $(".minimizecontainer").height() - $(".completioncontainer").height();
             $(".customizationwizcontainer").css("height", newHeight);
         }
     });
