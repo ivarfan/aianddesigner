@@ -1,10 +1,7 @@
+let pageHeight = window.innerHeight;
+$(".fullscreenblock").height(pageHeight);
+
 $(document).ready(function() {
-    window.onresize = function() {
-        document.body.height = window.innerHeight;
-    }
-    window.onresize(); // called to initially set the height.
-    let pageHeight = window.innerHeight;
-    $(".fullscreenblock").height(pageHeight);
 
     $.easing.jswing = $.easing.swing;
 
