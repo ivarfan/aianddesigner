@@ -19,6 +19,7 @@ $(document).ready(function() {
         console.log(location.top + "/" + window.innerHeight);
         if (location.top < 10) {
             let newHeight = window.innerHeight - 30 - $(".minimizecontainer").height() - $(".completioncontainer").height();
+            console.log(newHeight);
             $(".customizationwizcontainer").css("height", newHeight);
         } else {
             $(".customizationwizcontainer").css("height", window.innerHeight - 12 - $(".minimizecontainer").height() - $(".completioncontainer").height());
