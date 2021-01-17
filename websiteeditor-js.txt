@@ -3,10 +3,10 @@ $(document).ready(function() {
     /***easing functions***/
 
 
-    $( window ).height(calc($(window).height() - $(window).height() + 100%));
+    $( window ).height($(window).height() - $(window).height() + 100%);
      
 
-    $( document ).height(calc($(document).height() - $(document).height() + 100%));
+    $( document ).height($(document).height() - $(document).height() + 100%);
 
     $.easing.jswing = $.easing.swing;
 
