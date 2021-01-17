@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
 
-    console.log($("#nav-backgroundColor-coral").getBoundingClientRect());
+    console.log(document.querySelector("#nav-backgroundColor-coral").getBoundingClientRect());
 
     window.onresize = function() {
         document.body.style.height = window.innerHeight;
