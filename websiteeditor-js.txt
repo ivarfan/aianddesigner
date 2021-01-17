@@ -208,13 +208,14 @@ $(document).ready(function() {
         let section = items[0];
         let attribute = items[1];
         let location = document.querySelector("#" + tapped).getBoundingClientRect();
+        let scrolledLocation = document.querySelector("#" + tapped).scrollTop;
         $("#" + tapped + "-list").css("left", location.left);
-        if (location.top + 140 >= window.innerHeight) {
-            let difference = location.top + 170 - window.innerHeight;
-            let topPos = location.top - 44 - difference;
+        if (location.top + scrolledLocation + 140 >= window.innerHeight) {
+            let difference = location.top + scrolledLocation + 170 - window.innerHeight;
+            let topPos = location.top + scrolledLocation - 44 - difference;
             $("#" + tapped + "-list").css("top", topPos);
         } else {
-            $("#" + tapped + "-list").css("top", location.top - 44);
+            $("#" + tapped + "-list").css("top", location.top + scrolledLocation - 44);
         }
         $("#" + tapped).attr("tabindex", 0).focus();
         $("#" + tapped + "-list").animate({
