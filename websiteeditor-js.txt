@@ -19,11 +19,10 @@ $(document).ready(function() {
         document.body.style.height = window.innerHeight;
         let location = document.querySelector(".customizationwiz").getBoundingClientRect();
         console.log(location.top + "/" + window.innerHeight);
-        if (location.top <= 10) {
+        if (location.top < 10) {
             $(".customizationwiz").css("top", "10");
         } else {
-            let newHeight = window.innerHeight - 30 - $(".minimizecontainer").height() - $(".completioncontainer").height();
-            $(".customizationwizcontainer").css("height", newHeight);
+            $(".customizationwiz").css("top", "auto");
         }
     });
 
