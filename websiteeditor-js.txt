@@ -12,11 +12,9 @@ $(document).ready(function() {
         $(".customizationwizcontainer").css("height", newHeight);
     }
 ***/
+    document.body.style.height = window.innerHeight;
     $(window).resize(function() {
-        window.onresize = function() {
-                document.body.style.height = window.innerHeight;
-        }
-        window.onresize();
+        document.body.style.height = window.innerHeight;
         let customWizHeight = $(".minimizecontainer").height() + $(".customizationwizcontainer").height() + $(".completioncontainer").height();
         if (window.innerHeight < customWizHeight + 10) {
             let newHeight = window.innerHeight - 40 - $(".minimizecontainer").height() - $(".completioncontainer").height();
