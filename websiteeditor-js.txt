@@ -6,7 +6,7 @@ $(document).ready(function() {
     }
     window.onresize(); // called to initially set the height.
 
-    let customWizHeight = $(".minimizecontainer").height() + $(".customizationwizcontainer").height() + $(".completioncontainer").height();
+    var customWizHeight = $(".minimizecontainer").height() + $(".customizationwizcontainer").height() + $(".completioncontainer").height();
     if (window.innerHeight < customWizHeight + 10) {
         let newHeight = window.innerHeight - 40 - $(".minimizecontainer").height() - $(".completioncontainer").height();
         $(".customizationwizcontainer").css("height", newHeight);
@@ -21,7 +21,9 @@ $(document).ready(function() {
         if (window.innerHeight < customWizHeight + 10) {
             let newHeight = window.innerHeight - 40 - $(".minimizecontainer").height() - $(".completioncontainer").height();
             $(".customizationwizcontainer").css("height", newHeight);
-    }
+        } else {
+            $(".customizationwizcontainer").css("height", "auto");
+        }
     });
 
     $.easing.jswing = $.easing.swing;
