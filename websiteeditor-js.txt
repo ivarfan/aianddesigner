@@ -217,7 +217,7 @@ $(document).ready(function() {
         } else {
             $("#" + tapped + "-list").css("top", location.top + scrolledLocation - 44);
         }
-        $("#" + tapped).attr("tabindex", 0).focus();
+        /*$("#" + tapped).attr("tabindex", 0).focus();*/
         $("#" + tapped + "-list").animate({
               top: "+=7px",
               opacity: "show"
