@@ -1,3 +1,5 @@
+html, body { height: 100%; }
+
 *:focus {
     outline: none;
     border-color: #005dd6;
