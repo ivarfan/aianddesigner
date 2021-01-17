@@ -13,6 +13,7 @@ $(document).ready(function() {
     }
 ***/
     document.body.style.height = window.innerHeight;
+    document.body.style.width = window.innerWidth;
     $(window).resize(function() {
         let autoHeight = $(".customizationwizcontainer")[0].scrollHeight;
         let location = document.querySelector(".customizationwiz").getBoundingClientRect();
