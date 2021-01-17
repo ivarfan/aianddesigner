@@ -16,7 +16,7 @@ $(document).ready(function() {
     var menuPadding = 28 + 10 + 10;
     document.body.style.height = window.innerHeight;
     $(window).resize(function() {
-        console.log($(".customizationwizcontainer").scrollHeight);
+        console.log($(".customizationwizcontainer")[0].scrollHeight);
         document.body.style.height = window.innerHeight;
         let location = document.querySelector(".customizationwiz").getBoundingClientRect();
         console.log(location.top + "/" + window.innerHeight);
