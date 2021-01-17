@@ -7,6 +7,7 @@ $(document).ready(function() {
     window.onresize(); // called to initially set the height.
 
     let customWizHeight = $(".minimizecontainer").height() + $(".customizationwizcontainer").height() + $(".completioncontainer").height();
+    console.log(customWizHeight);
     if (window.innerHeight < customWizHeight + 10) {
         let newHeight = window.innerHeight - 10 - $(".minimizecontainer").height() - $(".completioncontainer").height();
         $(".customizationwizcontainer").height(newHeight);
