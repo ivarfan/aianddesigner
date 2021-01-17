@@ -188,13 +188,8 @@ $(document).ready(function() {
         let items = tapped.split("-");
         let section = items[0];
         let attribute = items[1];
-        let listToOpen = "#" + tapped + "-list";
-        console.log(listToOpen);
-        console.log(document.querySelector(listToOpen).getBoundingClientRect().bottom);
-        console.log(window.innerHeight);
-        console.log(document.querySelector(listToOpen).getBoundingClientRect().bottom >= window.innerHeight);
-        if (document.querySelector(listToOpen).getBoundingClientRect().bottom >= window.innerHeight) {
-            let difference = document.querySelector(listToOpen).getBoundingClientRect().bottom - window.innerHeight + 6;
+        if (document.querySelector(tapped).getBoundingClientRect().top + 150 >= window.innerHeight) {
+            let difference = document.querySelector(tapped).getBoundingClientRect().top + 156 - window.innerHeight;
             let topPos = -44 - difference;
             $("#" + tapped + "-list").css("top", topPos);
         }
