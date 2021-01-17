@@ -15,9 +15,9 @@ $(document).ready(function() {
     document.body.style.height = window.innerHeight;
     $(window).resize(function() {
         document.body.style.height = window.innerHeight;
-        let customWizHeight = $(".minimizecontainer").height() + $(".customizationwizcontainer").height() + $(".completioncontainer").height();
         console.log(customWizHeight + "/" + window.innerHeight);
-        if (window.innerHeight < customWizHeight + 10) {
+        let location = document.querySelector(".customizationwiz").getBoundingClientRect();
+        if (location.top < 10) {
             let newHeight = window.innerHeight - 40 - $(".minimizecontainer").height() - $(".completioncontainer").height();
             $(".customizationwizcontainer").css("height", newHeight);
         } else {
