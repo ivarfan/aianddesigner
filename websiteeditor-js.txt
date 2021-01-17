@@ -188,6 +188,7 @@ $(document).ready(function() {
         let items = tapped.split("-");
         let section = items[0];
         let attribute = items[1];
+        console.log($("#" + tapped + "-list").position().top + 194 >= window.innerHeight);
         if ($("#" + tapped + "-list").position().top + 194 >= window.innerHeight) {
             let difference = $("#" + tapped + "-list").position().top + 200 - window.innerHeight;
             let topPos = -44 - difference;
