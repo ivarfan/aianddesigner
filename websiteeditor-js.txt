@@ -196,6 +196,11 @@ $(document).ready(function() {
         }, 300, "easeOutCubic");
         $("#" + tapped + "-arrow").animateRotate(0, 180, 250, "easeInOutCubic");
         $("#" + tapped + "-closing").css("display", "block");
+        if ($("#" + tapped + "-list").position().top + 194 >= window.innerHeight) {
+            let difference = $("#" + tapped + "-list").position().top + 200 - window.innerHeight;
+            let topPos = -44 - difference;
+            $("#" + tapped + "-list").css("top", topPos);
+        }
     });
 
     $(".dropdownoptioncontainer").click(function(event) {
@@ -231,6 +236,7 @@ $(document).ready(function() {
         $("#" + object + "-closing").css("display", "none");
         $("." + section).fadeOut(200, "easeInCubic");
         setTimeout(function() {$("." + section).css(attribute, value).fadeIn(200, "easeOutCubic");}, 200);
+        setTimeout(function() {$("#" + object + "-list").css("top", "-44");}, 400);
     });
 
     $(".closing").click(function(event) {
@@ -251,12 +257,6 @@ $(document).ready(function() {
         }, 300, "easeOutCubic");
         $("#" + object + "-arrow").animateRotate(180, 360, 250, "easeInOutCubic");
         $("#" + object + "-closing").css("display", "none");
+        setTimeout(function() {$("#" + object + "-list").css("top", "-44");}, 400);
     });
-
-    $("#shrinkcustomwiz").click(function(event) {
-        $(".customizationwiz").animate({
-              left: "+=232px"
-        }, 570, "easeInOutQuart");
-    });
-
 });
