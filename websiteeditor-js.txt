@@ -6,6 +6,12 @@ $(document).ready(function() {
     }
     window.onresize(); // called to initially set the height.
 
+    if (window.innerHeight <= 254) {
+        let totalHeight = $(".minimizecontainer").height() + $(".customizationwizcontainer").height() + $(".completioncontainer").height() - window.innerHeight + 10;
+        let newHeight = $(".customizationwizcontainer").height() - totalHeight;
+        $(".dropdownoptioncontainer").height(newHeight);
+    }
+
     $.easing.jswing = $.easing.swing;
 
     $.extend($.easing,
