@@ -14,7 +14,7 @@ $(document).ready(function() {
 ***/
     document.body.style.height = window.innerHeight;
     $(window).resize(function() {
-        console.log($(".customizationcontainer").height());
+        console.log($(".customizationcontainer").get(1).height());
         document.body.style.height = window.innerHeight;
         let location = document.querySelector(".customizationwiz").getBoundingClientRect();
         console.log(location.top + "/" + window.innerHeight);
