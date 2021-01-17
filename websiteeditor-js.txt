@@ -189,6 +189,7 @@ $(document).ready(function() {
         let section = items[0];
         let attribute = items[1];
         let listToOpen = "#" + tapped + "-list";
+        console.log(listToOpen);
         console.log(document.querySelector(listToOpen).getBoundingClientRect().bottom);
         console.log(window.innerHeight);
         console.log(document.querySelector(listToOpen).getBoundingClientRect().bottom >= window.innerHeight);
