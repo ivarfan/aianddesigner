@@ -2,6 +2,8 @@ $(document).ready(function() {
 
     /***easing functions***/
 
+    window.height = window.innerheight;
+
     $.easing.jswing = $.easing.swing;
 
     $.extend($.easing,
