@@ -17,7 +17,7 @@ $(document).ready(function() {
         document.body.style.height = window.innerHeight;
         let autoHeight = $(".customizationwizcontainer")[0].scrollHeight;
         let location = document.querySelector(".customizationwiz").getBoundingClientRect();
-        let newHeight = window.innerHeight - 30 - $(".minimizecontainer").height() - $(".completioncontainer").height();
+        let newHeight = window.innerHeight - 20 - $(".minimizecontainer").height() - $(".completioncontainer").height();
         if (location.top < 10 || newHeight <= autoHeight) {
             $(".customizationwizcontainer").css("height", newHeight);
         } else {
