@@ -1,11 +1,12 @@
+console.log(window.innerheight);
+console.log(window.height);
+
 $(document).ready(function() {
 
     /***easing functions***/
 
     console.log(window.innerheight);
     console.log(window.height);
-
-    $("body").height(window.innerheight);
 
     $.easing.jswing = $.easing.swing;
 
