@@ -1,10 +1,13 @@
 $(document).ready(function() {
 
     /***easing functions***/
-
+    console.log($("html").css("height"));
+    console.log($("body").css("height"));
     let pageHeight = window.innerHeight;
     $("html").css("height", pageHeight);
     $("body").css("height", pageHeight);
+    console.log($("html").css("height"));
+    console.log($("body").css("height"));
 
     $.easing.jswing = $.easing.swing;
 
