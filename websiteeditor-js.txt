@@ -21,7 +21,7 @@ $(document).ready(function() {
             let newHeight = window.innerHeight - 30 - $(".minimizecontainer").height() - $(".completioncontainer").height();
             $(".customizationwizcontainer").css("height", newHeight);
         } else {
-            $(".customizationwizcontainer").css("height", window.innerHeight - 10 - $(".minimizecontainer").height() - $(".completioncontainer").height());
+            $(".customizationwizcontainer").css("height", window.innerHeight - 12 - $(".minimizecontainer").height() - $(".completioncontainer").height());
         }
     });
 
