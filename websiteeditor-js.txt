@@ -269,5 +269,10 @@ $(document).ready(function() {
         $("#" + object + "-arrow").animateRotate(180, 360, 250, "easeInOutCubic");
         $("#" + object + "-closing").css("display", "none");
     });
-    
+
+    $(".textinput").click(function(event) {
+        $("#testinghaha").attr("tabindex", 0).focus();
+
+    });
+
 });
