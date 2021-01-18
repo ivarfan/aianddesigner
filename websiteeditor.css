@@ -40,7 +40,7 @@ input {
     border-bottom-style: hidden;
     background-color: transparent;
     margin: 0px;
-    border: 0px;
+    padding: 0px;
 }
 
 input:focus {
