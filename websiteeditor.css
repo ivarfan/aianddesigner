@@ -34,11 +34,17 @@
 }
 
 input {
-  border-top-style: hidden;
-  border-right-style: hidden;
-  border-left-style: hidden;
-  border-bottom-style: hidden;
-  background-color: transparent;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+    background-color: transparent;
+    margin: 0px;
+    border: 0px;
+}
+
+input:focus {
+    outline: none;
 }
 
 input[type="number"] {
