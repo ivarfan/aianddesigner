@@ -270,14 +270,9 @@ $(document).ready(function() {
         $("#" + object + "-closing").css("display", "none");
     });
 
-/*
-    $("input").click(function(event) {
-        $("#testing-background").css("display", "block");
-    });
 
-    $(".TextClose").click(function(event) {
-        $("#testinghaha").blur();
+    $("input").bind('blur keyup',function(e) {  
+          if (e.type === 'blur' || e.keyCode === 13) {$("#testinghaha").blur();}
     });
-*/
 
 });
