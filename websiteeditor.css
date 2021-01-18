@@ -39,9 +39,6 @@ input {
     border-left-style: hidden;
     border-bottom-style: hidden;
     background-color: transparent;
-    margin: 0px;
-    padding: 0px;
-    width: 60px;
 }
 
 input:focus {
@@ -52,7 +49,6 @@ input[type="number"] {
     font-family: Open Sans;
     font-size: 14px;
     line-height: 20px;
-    outline: none;
 }
 
 .noselect {
