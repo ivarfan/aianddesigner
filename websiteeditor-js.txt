@@ -270,8 +270,12 @@ $(document).ready(function() {
         $("#" + object + "-closing").css("display", "none");
     });
 
-    $(".textinput").click(function(event) {
-        /******/
+    $("input").click(function(event) {
+        $("#testing-background").css("display", "block");
+    });
+
+    $(".TextClose").click(function(event) {
+        $("#testinghaha").blur();
     });
 
 });
