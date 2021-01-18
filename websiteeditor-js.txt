@@ -270,6 +270,7 @@ $(document).ready(function() {
         $("#" + object + "-closing").css("display", "none");
     });
 
+/*
     $("input").click(function(event) {
         $("#testing-background").css("display", "block");
     });
@@ -277,5 +278,6 @@ $(document).ready(function() {
     $(".TextClose").click(function(event) {
         $("#testinghaha").blur();
     });
+*/
 
 });
