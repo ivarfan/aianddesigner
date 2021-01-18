@@ -41,6 +41,7 @@ input {
     background-color: transparent;
     margin: 0px;
     padding: 0px;
+    width: 60px;
 }
 
 input:focus {
