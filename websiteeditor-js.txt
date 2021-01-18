@@ -271,8 +271,7 @@ $(document).ready(function() {
     });
 
     $(".textinput").click(function(event) {
-        $("#testinghaha").attr("tabindex", 0).focus();
-
+        /******/
     });
 
 });
