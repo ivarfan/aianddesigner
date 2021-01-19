@@ -148,7 +148,7 @@ $(document).ready(function() {
                 /*deltaHeight = parseInt($(".customizationwiz").css("top"), 10) + newHeight - $(".customizationwizcontainer").height();*/
                 console.log(parseInt($(".customizationwiz").css("top"), 10));
                 console.log(newHeight);
-                console.log(autoHeight);
+                console.log($(".customizationwizcontainer").height());
                 /*console.log(deltaHeight);*/
                 /*$(".customizationwiz").css("top", deltaHeight);*/
             }
