@@ -195,9 +195,14 @@ $(document).ready(function() {
 
     $(".minimizebuttoncontainer").click(function(event) {
         deltaHeight = $(".customizationwiz").height() - 36;
+        $(".minimizebuttoncontainer").fadeOut(200, "easeInCubic");
+        setTimeout(function() {
+            $(".expandbuttoncontainer").fadeIn(200, "easeOutCubic");
+        }, 200);
+        $(".expandbuttoncontainer")
         $(".customizationwiz").animate({
               top: "+=" + deltaHeight + "px",
-        }, 300, "easeInOutCubic");
+        }, 600, "easeInOutCubic");
     });
 
     $(".dropdowncontainer").click(function(event) {
