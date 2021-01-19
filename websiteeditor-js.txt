@@ -211,7 +211,7 @@ $(document).ready(function() {
             $(".minimizebuttoncontainer").fadeIn(200, "easeOutCubic");
         }, 200);
         $(".customizationwiz").animate({
-              top: "+=" + deltaHeight + "px",
+              top: "-=" + deltaHeight + "px",
         }, 600, "easeInOutCubic");
     });
 
