@@ -142,10 +142,11 @@ $(document).ready(function() {
         let autoHeight = $(".customizationwizcontainer")[0].scrollHeight;
         let location = document.querySelector(".customizationwiz").getBoundingClientRect();
         let newHeight = window.innerHeight - 30 - $(".minimizecontainer").height() - $(".completioncontainer").height();
-        if (location.top < 10 || newHeight <= autoHeight) {
+        if (location.top < 10 || newHeight < autoHeight) {
             $(".customizationwizcontainer").css("height", newHeight);
             if (hidden === true) {
                 /*deltaHeight = parseInt($(".customizationwiz").css("top"), 10) + newHeight - $(".customizationwizcontainer").height();*/
+                /*
                 console.log("top:" + parseInt($(".customizationwiz").css("top"), 10));
                 console.log("newHeight:" + newHeight);
                 console.log("originHeight:" + $(".customizationwizcontainer").height());
@@ -153,7 +154,7 @@ $(document).ready(function() {
                 console.log("windowHeight:" + window.innerHeight);
                 console.log("---------");
                 /*console.log(deltaHeight);*/
-                /*$(".customizationwiz").css("top", deltaHeight);*/
+                $(".customizationwiz").css("top", $(".customcontainer").height() - 36);
             }
         } else {
             $(".customizationwizcontainer").css("height", "auto");
