@@ -189,6 +189,10 @@ $(document).ready(function() {
         }
     };
 
+    $(document).click(function(event) {
+        $(':focus').blur();
+    });
+
     $(".dropdowncontainer").click(function(event) {
         event.stopPropagation();
         if (event.target !== event.currentTarget) {
@@ -216,7 +220,6 @@ $(document).ready(function() {
               opacity: "show"
         }, 300, "easeOutCubic");
         $("#" + tapped + "-arrow").animateRotate(0, 180, 250, "easeInOutCubic");
-        $("#" + tapped + "-closing").css("display", "block");
     });
 
     $(".dropdownoptioncontainer").click(function(event) {
@@ -251,11 +254,6 @@ $(document).ready(function() {
               height: "hide"
         }, 300, "easeOutCubic");
         $("#" + focus + "-arrow").animateRotate(180, 360, 250, "easeInOutCubic");
-        $("#" + focus + "-closing").css("display", "none");
-    });
-
-    $(document).click(function(event) {
-        $(':focus').blur();
     });
 
     $("input").click(function(event) {
