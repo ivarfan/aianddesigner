@@ -274,13 +274,13 @@ $(document).ready(function() {
     $("input").keyup(function(event) {  
         if (event.keyCode === 13) {
             event.preventDefault();
-            $("#myText").blur();
+            $(this).blur();
         }
     });
 
 
     $("input").blur(function(event) {
-            console.log($(this).attr("id"));
+        console.log($(this).attr("id"));
     });
 
 });
