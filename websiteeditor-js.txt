@@ -145,12 +145,12 @@ $(document).ready(function() {
         if (location.top < 10 || newHeight <= autoHeight) {
             $(".customizationwizcontainer").css("height", newHeight);
             if (hidden === true) {
-                deltaHeight = parseInt($(".customizationwiz").css("top"), 10) + newHeight - $(".customizationwizcontainer").height();
+                /*deltaHeight = parseInt($(".customizationwiz").css("top"), 10) + newHeight - $(".customizationwizcontainer").height();*/
                 console.log(parseInt($(".customizationwiz").css("top"), 10));
                 console.log(newHeight);
                 console.log(autoHeight);
-                console.log(deltaHeight);
-                $(".customizationwiz").css("top", deltaHeight);
+                /*console.log(deltaHeight);*/
+                /*$(".customizationwiz").css("top", deltaHeight);*/
             }
         } else {
             $(".customizationwizcontainer").css("height", "auto");
