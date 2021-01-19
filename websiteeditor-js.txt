@@ -271,8 +271,11 @@ $(document).ready(function() {
     });
 
 
-    $("#myText").on('blur keyup',function(e) {  
-          if (e.type !== 'keyup' || (e.type === 'keyup' && e.keyCode === 13)) {$("#myText").blur();}
+    $("#myText").bind('blur keyup',function(e) {  
+          if (e.type !== 'keyup' || (e.type === 'keyup' && e.keyCode === 13)) {
+            event.stopPropagation();
+            $("#myText").blur();
+        }
     });
 
 });
