@@ -255,6 +255,11 @@ $(document).ready(function() {
     });
 
     $(".dropdowncontainer").blur(function(even) {
+        var tapped = $(this).attr("id");
+        let items = tapped.split("-");
+        let section = items[0];
+        let attribute = items[1];
+        let object = section + "-" + attribute;
         $("#" + object + "-list").animate({
               top: "-=7px",
               opacity: "hide",
