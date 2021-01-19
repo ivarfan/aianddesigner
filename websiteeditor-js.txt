@@ -195,10 +195,9 @@ $(document).ready(function() {
 
     $(".minimizebuttoncontainer").click(function(event) {
         deltaHeight = $(".customizationwiz").height() - 36;
-        console.log("+=" + deltaHeight + "px");
         $(".customizationwiz").animate({
               top: "+=" + deltaHeight + "px",
-        }, 300, "easeOutCubic");
+        }, 300, "easeInOutCubic");
     });
 
     $(".dropdowncontainer").click(function(event) {
