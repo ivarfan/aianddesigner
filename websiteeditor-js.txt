@@ -149,6 +149,7 @@ $(document).ready(function() {
         }
         if (hidden === true) {
             deltaHeight = $(".customizationwiz").css("top").replace(/[^-\d\.]/g, '') + newHeight - autoHeight;
+            console.log(deltaHeight);
             $(".customizationwiz").css("top", deltaHeight);
         }
     });
