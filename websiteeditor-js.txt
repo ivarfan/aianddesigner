@@ -199,10 +199,11 @@ $(document).ready(function() {
         setTimeout(function() {
             $(".expandbuttoncontainer").css("display", "flex").fadeIn(200, "easeOutCubic");
         }, 200);
-        $(".expandbuttoncontainer")
+        /*
         $(".customizationwiz").animate({
               top: "+=" + deltaHeight + "px",
         }, 600, "easeInOutCubic");
+        */
     });
 
     $(".dropdowncontainer").click(function(event) {
