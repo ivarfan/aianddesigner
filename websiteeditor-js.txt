@@ -226,7 +226,7 @@ $(document).ready(function() {
         style[section][attribute] = value;
         $("#" + focus).find(".dropdownoption").text($(this).text());
         if ((attribute.toLowerCase()).includes("backgroundcolor")) {
-            $("#" + section + "-" + attribute + "-chosenicon").css("backgroundColor", $(this).children().not(".dropdownoption").css("backgroundColor"));
+            $("#" + focus + "-chosenicon").css("backgroundColor", $(this).children().not(".dropdownoption").css("backgroundColor"));
             let opacity = style[section]["opacity"];
             value = "rgba" + color[value] + opacity + ")";
         }
