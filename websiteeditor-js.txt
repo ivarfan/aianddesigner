@@ -271,8 +271,8 @@ $(document).ready(function() {
     });
 
 
-    $("#myText").bind("blur keyup",function(e) {  
-            if (e.type !== 'keyup' || (e.type === 'keyup' && e.keyCode === 13)) {
+    $("#myText").keyup(function(e) {  
+            if (e.keyCode === 13) {
                 e.preventDefault();
                 $("#myText").blur();
         }
