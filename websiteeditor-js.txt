@@ -195,6 +195,7 @@ $(document).ready(function() {
         } else {
             var tapped = event.target.id;
         }
+        focus = tapped;
         let items = tapped.split("-");
         let section = items[0];
         let attribute = items[1];
@@ -209,7 +210,6 @@ $(document).ready(function() {
             $("#" + tapped + "-list").css("top", location.top + scrolledLocation - 44);
         }
         $("#" + tapped).attr("tabindex", 0).focus();
-        focus = "#" + tapped;
         $("#" + tapped + "-list").animate({
               top: "+=7px",
               opacity: "show"
@@ -219,18 +219,11 @@ $(document).ready(function() {
     });
 
     $(".dropdownoptioncontainer").click(function(event) {
-        if (event.target !== event.currentTarget) {
-            var tapped = $(this).attr("id");
-        } else {
-            var tapped = event.target.id;
-        }
-        let items = tapped.split("-");
+        let items = focus.split("-");
         let section = items[0];
         let attribute = items[1];
-        let value = items[2];
-        let object = section + "-" + attribute;
+        let value = $(this).text();
         style[section][attribute] = value;
-        console.log($(focus).attr("id"));
         $("#" + object).find(".dropdownoption").html($(this).find(".dropdownoption").html());
         if ((attribute.toLowerCase()).includes("backgroundcolor")) {
             $("#" + section + "-" + attribute + "-chosenicon").css("backgroundColor", $(this).children().not(".dropdownoption").css("backgroundColor"));
@@ -242,26 +235,21 @@ $(document).ready(function() {
             value = "rgba" + color[colorname] + value + ")";
             attribute = "backgroundColor";
         }
+        $("#" + focus).blur();
         $("." + section).fadeOut(200, "easeInCubic");
-        $("#" + object).blur();
         setTimeout(function() {
             $("." + section).css(attribute, value).fadeIn(200, "easeOutCubic");
         }, 200);
     });
 
     $(".dropdowncontainer").blur(function(event) {
-        var tapped = $(this).attr("id");
-        let items = tapped.split("-");
-        let section = items[0];
-        let attribute = items[1];
-        let object = section + "-" + attribute;
-        $("#" + object + "-list").animate({
+        $("#" + focus + "-list").animate({
               top: "-=7px",
               opacity: "hide",
               height: "hide"
         }, 300, "easeOutCubic");
-        $("#" + object + "-arrow").animateRotate(180, 360, 250, "easeInOutCubic");
-        $("#" + object + "-closing").css("display", "none");
+        $("#" + focus + "-arrow").animateRotate(180, 360, 250, "easeInOutCubic");
+        $("#" + focus + "-closing").css("display", "none");
     });
 
     $(".closing").click(function(event) {
