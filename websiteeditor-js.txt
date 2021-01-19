@@ -166,6 +166,8 @@ $(document).ready(function() {
     /***initializations***/
     $("body").addClass("noselect");
 
+    var focus = "";
+
     let color = {
         "dustyrose" : "(212, 200, 182, ",
         "wheat" : "(184, 146, 106, ",
@@ -207,6 +209,7 @@ $(document).ready(function() {
             $("#" + tapped + "-list").css("top", location.top + scrolledLocation - 44);
         }
         $("#" + tapped).attr("tabindex", 0).focus();
+        focus = "#" + tapped;
         $("#" + tapped + "-list").animate({
               top: "+=7px",
               opacity: "show"
@@ -227,7 +230,7 @@ $(document).ready(function() {
         let value = items[2];
         let object = section + "-" + attribute;
         style[section][attribute] = value;
-        console.log($(":focus").attr("id"));
+        console.log($(focus).attr("id"));
         $("#" + object).find(".dropdownoption").html($(this).find(".dropdownoption").html());
         if ((attribute.toLowerCase()).includes("backgroundcolor")) {
             $("#" + section + "-" + attribute + "-chosenicon").css("backgroundColor", $(this).children().not(".dropdownoption").css("backgroundColor"));
