@@ -281,7 +281,6 @@ $(document).ready(function() {
 
     $("input").blur(function(event) {
             console.log($(this).attr("id"));
-        }
     });
 
 });
