@@ -239,22 +239,13 @@ $(document).ready(function() {
             attribute = "backgroundColor";
         }
         $("#" + object).blur();
-        /*
-        $("#" + object + "-list").animate({
-              top: "-=7px",
-              opacity: "hide",
-              height: "hide"
-        }, 300, "easeOutCubic");
-        $("#" + object + "-arrow").animateRotate(180, 360, 250, "easeInOutCubic");
-        $("#" + object + "-closing").css("display", "none");
-        */
         $("." + section).fadeOut(200, "easeInCubic");
         setTimeout(function() {
             $("." + section).css(attribute, value).fadeIn(200, "easeOutCubic");
         }, 200);
     });
 
-    $(".dropdowncontainer").blur(function(even) {
+    $(".dropdowncontainer").blur(function(event) {
         var tapped = $(this).attr("id");
         let items = tapped.split("-");
         let section = items[0];
@@ -270,6 +261,7 @@ $(document).ready(function() {
     });
 
     $(".closing").click(function(event) {
+        /*
         if (event.target !== event.currentTarget) {
             var tapped = $(this).attr("id");
         } else {
@@ -279,16 +271,8 @@ $(document).ready(function() {
         let section = items[0];
         let attribute = items[1];
         let object = section + "-" + attribute;
-        $("#" + object).blur();
-        /*
-        $("#" + object + "-list").animate({
-              top: "-=7px",
-              opacity: "hide",
-              height: "hide"
-        }, 300, "easeOutCubic");
-        $("#" + object + "-arrow").animateRotate(180, 360, 250, "easeInOutCubic");
-        $("#" + object + "-closing").css("display", "none");
         */
+        $(':focus').blur();
     });
 
 
