@@ -150,6 +150,7 @@ $(document).ready(function() {
                 console.log("newHeight:" + newHeight);
                 console.log("originHeight:" + $(".customizationwizcontainer").height());
                 console.log("container:" + $(".container").height());
+                console.log("windowHeight:" + window.innerHeight);
                 console.log("---------");
                 /*console.log(deltaHeight);*/
                 /*$(".customizationwiz").css("top", deltaHeight);*/
