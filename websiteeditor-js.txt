@@ -147,7 +147,7 @@ $(document).ready(function() {
         } else {
             $(".customizationwizcontainer").css("height", "auto");
         }
-        if hidden {
+        if (hidden === true) {
             deltaHeight = $(".customizationwiz").css("top") + newHeight - autoHeight;
             $(".customizationwiz").css("top", deltaHeight);
         }
