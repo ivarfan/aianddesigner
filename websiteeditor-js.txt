@@ -149,6 +149,7 @@ $(document).ready(function() {
                 console.log(parseInt($(".customizationwiz").css("top"), 10));
                 console.log(newHeight);
                 console.log($(".customizationwizcontainer").height());
+                console.log($(".container").height());
                 /*console.log(deltaHeight);*/
                 /*$(".customizationwiz").css("top", deltaHeight);*/
             }
