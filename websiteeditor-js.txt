@@ -224,7 +224,7 @@ $(document).ready(function() {
         let attribute = items[1];
         let value = $(this).text();
         style[section][attribute] = value;
-        $("#" + object).find(".dropdownoption").html($(this).find(".dropdownoption").html());
+        $("#" + focus).find(".dropdownoption").text($(this).text());
         if ((attribute.toLowerCase()).includes("backgroundcolor")) {
             $("#" + section + "-" + attribute + "-chosenicon").css("backgroundColor", $(this).children().not(".dropdownoption").css("backgroundColor"));
             let opacity = style[section]["opacity"];
