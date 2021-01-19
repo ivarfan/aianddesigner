@@ -12,6 +12,9 @@
         border-left-color: #7d7d7d;
     }
 
+    .minimizebuttoncontainer:hover {
+        background-color: #fafafa;
+    }
 
     .dropdownoptioncontainer:hover {
         background-color: #f2f2f2;
@@ -26,10 +29,6 @@
         border-right-color: #7d7d7d;
         border-bottom-color: #7d7d7d;
         border-left-color: #7d7d7d;
-    }
-
-    .minimizebuttoncontainer:hover {
-        background-color: #fafafa;
     }
 
 }

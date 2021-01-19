@@ -193,6 +193,12 @@ $(document).ready(function() {
         $(':focus').blur();
     });
 
+    $(".minimizebuttoncontainer").click(function(event) {
+        $(".customizationwiz").animate({
+              top: "+=" + $(".customizationwiz").height() - 36 + "px",
+        }, 300, "easeOutCubic");
+    });
+
     $(".dropdowncontainer").click(function(event) {
         event.stopPropagation();
         if (event.target !== event.currentTarget) {
