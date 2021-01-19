@@ -258,15 +258,16 @@ $(document).ready(function() {
         $(':focus').blur();
     });
 
+    $("input").click(function(event) {
+        event.stopPropagation(); 
+    });
 
     $("input").keyup(function(event) {
-        event.stopPropagation(); 
         if (event.keyCode === 13) {
             event.preventDefault();
             $(this).blur();
         }
     });
-
 
     $("input").blur(function(event) {
         console.log($(this).attr("id"));
