@@ -190,6 +190,7 @@ $(document).ready(function() {
     };
 
     $(".dropdowncontainer").click(function(event) {
+        event.stopPropagation();
         if (event.target !== event.currentTarget) {
             var tapped = $(this).attr("id");
         } else {
@@ -219,6 +220,7 @@ $(document).ready(function() {
     });
 
     $(".dropdownoptioncontainer").click(function(event) {
+        event.stopPropagation();
         let items = focus.split("-");
         let section = items[0];
         let attribute = items[1];
@@ -252,12 +254,13 @@ $(document).ready(function() {
         $("#" + focus + "-closing").css("display", "none");
     });
 
-    $(".closing").click(function(event) {
+    $(document).click(function(event) {
         $(':focus').blur();
     });
 
 
-    $("input").keyup(function(event) {  
+    $("input").keyup(function(event) {
+        event.stopPropagation(); 
         if (event.keyCode === 13) {
             event.preventDefault();
             $(this).blur();
