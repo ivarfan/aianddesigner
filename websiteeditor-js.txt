@@ -148,9 +148,7 @@ $(document).ready(function() {
             $(".customizationwizcontainer").css("height", "auto");
         }
         if (hidden === true) {
-            deltaHeight = $(".customizationwiz").css("top") + newHeight - autoHeight;
-            console.log($(".customizationwiz").css("top"));
-            console.log(deltaHeight);
+            deltaHeight = $(".customizationwiz").css("top").replace(/[^-\d\.]/g, ''); + newHeight - autoHeight;
             $(".customizationwiz").css("top", deltaHeight);
         }
     });
