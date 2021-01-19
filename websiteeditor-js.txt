@@ -194,7 +194,7 @@ $(document).ready(function() {
     });
 
     $(".minimizebuttoncontainer").click(function(event) {
-        console.log("+=" + $(".customizationwiz").height() - 36 + "px");
+        console.log($(".customizationwiz").height());
         $(".customizationwiz").animate({
               top: "+=" + $(".customizationwiz").height() - 36 + "px",
         }, 300, "easeOutCubic");
