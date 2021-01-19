@@ -169,22 +169,22 @@ $(document).ready(function() {
     var focus = "";
 
     let color = {
-        "dustyrose" : "(212, 200, 182, ",
-        "wheat" : "(184, 146, 106, ",
-        "blackish" : "(45, 45, 43, ",
-        "breath" : "(234, 230, 223, ",
-        "wind" : "(176, 176, 176, ",
-        "coral" : "(255, 83, 61, ",
-        "teal": "(15, 143, 143, ",
-        "olive": "(104, 105, 33, ",
-        "sea": "(31, 71, 141, ",
-        "dew": "(145, 179, 183, "
+        "Dusty Rose" : "(212, 200, 182, ",
+        "Wheat" : "(184, 146, 106, ",
+        "Blackish" : "(45, 45, 43, ",
+        "Breath" : "(234, 230, 223, ",
+        "Wind" : "(176, 176, 176, ",
+        "Coral" : "(255, 83, 61, ",
+        "Teal": "(15, 143, 143, ",
+        "Olive": "(104, 105, 33, ",
+        "Sea": "(31, 71, 141, ",
+        "Dew": "(145, 179, 183, "
     };
 
 
     let style = {
         "nav" : {
-            "backgroundColor" : "dustyrose",
+            "backgroundColor" : "Dusty Rose",
             "opacity" : "1",
         }
     };
