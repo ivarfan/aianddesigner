@@ -146,10 +146,11 @@ $(document).ready(function() {
             $(".customizationwizcontainer").css("height", newHeight);
             if (hidden === true) {
                 /*deltaHeight = parseInt($(".customizationwiz").css("top"), 10) + newHeight - $(".customizationwizcontainer").height();*/
-                console.log(parseInt($(".customizationwiz").css("top"), 10));
-                console.log(newHeight);
-                console.log($(".customizationwizcontainer").height());
-                console.log($(".container").height());
+                console.log("top:" + parseInt($(".customizationwiz").css("top"), 10));
+                console.log("newHeight:" + newHeight);
+                console.log("originHeight:" + $(".customizationwizcontainer").height());
+                console.log("container:" + $(".container").height());
+                console.log("---------");
                 /*console.log(deltaHeight);*/
                 /*$(".customizationwiz").css("top", deltaHeight);*/
             }
