@@ -195,15 +195,24 @@ $(document).ready(function() {
 
     $(".minimizebuttoncontainer").click(function(event) {
         deltaHeight = $(".customizationwiz").height() - 36;
-        $(".minimizebuttoncontainer").fadeOut(200, "easeInCubic");
+        $(this).fadeOut(200, "easeInCubic");
         setTimeout(function() {
             $(".expandbuttoncontainer").fadeIn(200, "easeOutCubic");
         }, 200);
-        /*
         $(".customizationwiz").animate({
               top: "+=" + deltaHeight + "px",
         }, 600, "easeInOutCubic");
-        */
+    });
+
+    $(".expandbuttoncontainer").click(function(event) {
+        deltaHeight = $(".customizationwiz").height() - 36;
+        $(this).fadeOut(200, "easeInCubic");
+        setTimeout(function() {
+            $(".minimizebuttoncontainer").fadeIn(200, "easeOutCubic");
+        }, 200);
+        $(".customizationwiz").animate({
+              top: "+=" + deltaHeight + "px",
+        }, 600, "easeInOutCubic");
     });
 
     $(".dropdowncontainer").click(function(event) {
