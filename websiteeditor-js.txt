@@ -271,10 +271,16 @@ $(document).ready(function() {
     });
 
 
-    $("#myText").keyup(function(e) {  
-            if (e.keyCode === 13) {
-                e.preventDefault();
-                $("#myText").blur();
+    $("#myText").keyup(function(event) {  
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            $("#myText").blur();
+            console.log($(this).attr("id"));
+        }
+    });
+
+    $("#myText").blur(function(event) {  
+        return;
         }
     });
 
