@@ -14,11 +14,11 @@
 
 
     .dropdownoptioncontainer:hover {
-      background-color: #f2f2f2;
+        background-color: #f2f2f2;
     }
 
     #shrinkcustomwiz:hover {
-      opacity: 0.2;
+        opacity: 0.2;
     }
 
     input[type="number"]:not(:focus):hover {
@@ -27,6 +27,11 @@
         border-bottom-color: #7d7d7d;
         border-left-color: #7d7d7d;
     }
+
+    .minimizebuttoncontainer:hover {
+        background-color: #fafafa;
+    }
+
 }
 
 .selected {
