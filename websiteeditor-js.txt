@@ -197,7 +197,7 @@ $(document).ready(function() {
         deltaHeight = $(".customizationwiz").height() - 36;
         $(".minimizebuttoncontainer").fadeOut(200, "easeInCubic");
         setTimeout(function() {
-            $(".expandbuttoncontainer").fadeIn(200, "easeOutCubic");
+            $(".expandbuttoncontainer").css("display", "flex").fadeIn(200, "easeOutCubic");
         }, 200);
         $(".expandbuttoncontainer")
         $(".customizationwiz").animate({
