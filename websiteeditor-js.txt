@@ -194,9 +194,10 @@ $(document).ready(function() {
     });
 
     $(".minimizebuttoncontainer").click(function(event) {
-        console.log($(".customizationwiz").height());
+        deltaHeight = $(".customizationwiz").height() - 36;
+        console.log("+=" + deltaHeight + "px");
         $(".customizationwiz").animate({
-              top: "+=" + $(".customizationwiz").height() - 36 + "px",
+              top: "+=" + deltaHeight + "px",
         }, 300, "easeOutCubic");
     });
 
