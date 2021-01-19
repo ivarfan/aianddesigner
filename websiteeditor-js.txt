@@ -243,9 +243,7 @@ $(document).ready(function() {
             attribute = "backgroundColor";
         }
         $("." + section).fadeOut(200, "easeInCubic");
-        setTimeout(function() {
-            $("#" + object).blur();
-        }, 100);
+        $("#" + object).blur();
         setTimeout(function() {
             $("." + section).css(attribute, value).fadeIn(200, "easeOutCubic");
         }, 200);
