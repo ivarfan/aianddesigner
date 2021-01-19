@@ -1,19 +1,6 @@
 
 $(document).ready(function() {
 
-    document.body.style.height = window.innerHeight;
-    document.body.style.width = window.innerWidth;
-    $(window).resize(function() {
-        let autoHeight = $(".customizationwizcontainer")[0].scrollHeight;
-        let location = document.querySelector(".customizationwiz").getBoundingClientRect();
-        let newHeight = window.innerHeight - 30 - $(".minimizecontainer").height() - $(".completioncontainer").height();
-        if (location.top < 10 || newHeight <= autoHeight) {
-            $(".customizationwizcontainer").css("height", newHeight);
-        } else {
-            $(".customizationwizcontainer").css("height", "auto");
-        }
-    });
-
     $.easing.jswing = $.easing.swing;
 
     $.extend($.easing,
@@ -149,6 +136,23 @@ $(document).ready(function() {
         }
     });
 
+    document.body.style.height = window.innerHeight;
+    document.body.style.width = window.innerWidth;
+    $(window).resize(function() {
+        let autoHeight = $(".customizationwizcontainer")[0].scrollHeight;
+        let location = document.querySelector(".customizationwiz").getBoundingClientRect();
+        let newHeight = window.innerHeight - 30 - $(".minimizecontainer").height() - $(".completioncontainer").height();
+        if (location.top < 10 || newHeight <= autoHeight) {
+            $(".customizationwizcontainer").css("height", newHeight);
+        } else {
+            $(".customizationwizcontainer").css("height", "auto");
+        }
+        if hidden {
+            deltaHeight = $(".customizationwiz").css("top") + newHeight - autoHeight;
+            $(".customizationwiz").css("top", deltaHeight);
+        }
+    });
+
     $.fn.animateRotate = function(start, angle, duration, easing, complete) {
       var args = $.speed(duration, easing, complete);
       var step = args.step;
@@ -167,6 +171,7 @@ $(document).ready(function() {
     $("body").addClass("noselect");
 
     var focus = "";
+    var hidden = false;
 
     let color = {
         "Dusty Rose" : "(212, 200, 182, ",
@@ -202,6 +207,7 @@ $(document).ready(function() {
         $(".customizationwiz").animate({
               top: "+=" + deltaHeight + "px",
         }, 600, "easeInOutCubic");
+        hidden = true;
     });
 
     $(".expandbuttoncontainer").click(function(event) {
@@ -213,6 +219,7 @@ $(document).ready(function() {
         $(".customizationwiz").animate({
               top: "-=" + deltaHeight + "px",
         }, 600, "easeInOutCubic");
+        hidden = false;
     });
 
     $(".dropdowncontainer").click(function(event) {
