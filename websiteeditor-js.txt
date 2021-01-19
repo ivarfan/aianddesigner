@@ -239,8 +239,10 @@ $(document).ready(function() {
             value = "rgba" + color[colorname] + value + ")";
             attribute = "backgroundColor";
         }
-        $("#" + object).blur();
         $("." + section).fadeOut(200, "easeInCubic");
+        setTimeout(function() {
+            $("#" + object).blur();
+        }, 1);
         setTimeout(function() {
             $("." + section).css(attribute, value).fadeIn(200, "easeOutCubic");
         }, 200);
