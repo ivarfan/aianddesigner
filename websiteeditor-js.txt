@@ -242,7 +242,7 @@ $(document).ready(function() {
         $("." + section).fadeOut(200, "easeInCubic");
         setTimeout(function() {
             $("#" + object).blur();
-        }, 1);
+        }, 100);
         setTimeout(function() {
             $("." + section).css(attribute, value).fadeIn(200, "easeOutCubic");
         }, 200);
