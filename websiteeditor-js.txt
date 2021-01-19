@@ -279,9 +279,9 @@ $(document).ready(function() {
         }
     });
 
+/*
     $("#myText").blur(function(event) {  
-        return;
         }
     });
-
+*/
 });
