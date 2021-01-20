@@ -324,7 +324,6 @@ $(document).ready(function() {
             document.getElementById(focus).value = 100;
         }
         if (value = "") {
-            value = 100;
             document.getElementById(focus).value = 100;
         }
         updateDesign(focus, value);
