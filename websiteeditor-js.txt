@@ -201,6 +201,18 @@ $(document).ready(function() {
         }
     };
 
+    $.fn.updateDesign = function(focusInput, selectValue) {
+        let items = focusInput.split("-");
+        let section = items[0];
+        let attribute = items[1];
+        style[section][attribute] = selectValue;
+        $("#" + focus).find(".dropdownoption").text(selectValue);
+        if ((attribute.toLowerCase()).includes("backgroundcolor")) {
+            $("#" + focus + "-chosenicon").css("backgroundColor", $(this).children().not(".dropdownoption").css("backgroundColor"));
+            value = color[value];
+        }
+    };
+
     $(document).click(function(event) {
         $(':focus').blur();
     });
@@ -260,16 +272,8 @@ $(document).ready(function() {
 
     $(".dropdownoptioncontainer").click(function(event) {
         event.stopPropagation();
-        let items = focus.split("-");
-        let section = items[0];
-        let attribute = items[1];
         let value = $(this).text();
-        style[section][attribute] = value;
-        $("#" + focus).find(".dropdownoption").text($(this).text());
-        if ((attribute.toLowerCase()).includes("backgroundcolor")) {
-            $("#" + focus + "-chosenicon").css("backgroundColor", $(this).children().not(".dropdownoption").css("backgroundColor"));
-            value = color[value];
-        }
+        updateDesign(focus, value);
         $("#" + focus).blur();
         $("." + section).animate({opacity: 0}, 200, "easeInCubic");
         if ("opacity" in style[section]) {
