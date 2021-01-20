@@ -319,6 +319,10 @@ $(document).ready(function() {
 
     $("input").blur(function(event) {
         let value = document.getElementById(focus).value;
+        if (value > 100) {
+            value = 100;
+            document.getElementById(focus).value = 100;
+        }
         updateDesign(focus, value);
     });
 
