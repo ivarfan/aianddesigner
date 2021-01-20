@@ -209,7 +209,7 @@ $(document).ready(function() {
         $("#" + focus).find(".dropdownoption").text(selectValue);
         if ((attribute.toLowerCase()).includes("backgroundcolor")) {
             $("#" + focus + "-chosenicon").css("backgroundColor", $(this).children().not(".dropdownoption").css("backgroundColor"));
-            value = color[value];
+            value = color[selectValue];
         }
         return;
     };
