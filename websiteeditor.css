@@ -48,6 +48,11 @@
     pointer-events: none;
 }
 
+.customizationwizcontainer {
+    overflow-y:auto; 
+    overflow-x:hidden; 
+}
+
 input[type="number"] {
     -webkit-appearance: none;
     font-family: Open Sans;
