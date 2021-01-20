@@ -208,8 +208,8 @@ $(document).ready(function() {
         style[section][attribute] = selectValue;
         $("#" + focus).find(".dropdownoption").text(selectValue);
         if ((attribute.toLowerCase()).includes("backgroundcolor")) {
-            $("#" + focus + "-chosenicon").css("backgroundColor", $(this).children().not(".dropdownoption").css("backgroundColor"));
             selectValue = color[selectValue];
+            $("#" + focus + "-chosenicon").css("backgroundColor", selectValue);
         }
         $("." + section).animate({opacity: 0}, 200, "easeInCubic");
         if ("opacity" in style[section]) {
