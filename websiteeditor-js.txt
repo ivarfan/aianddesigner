@@ -319,7 +319,7 @@ $(document).ready(function() {
 
     $("input").blur(function(event) {
         let value = document.getElementById(focus).value;
-        if (value = "") {
+        if (value === "") {
             value = 100;
         } else if (value > 100) {
             value = 100;
