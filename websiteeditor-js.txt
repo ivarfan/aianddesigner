@@ -297,7 +297,13 @@ $(document).ready(function() {
     });
 
     $("input").click(function(event) {
-        event.stopPropagation(); 
+        event.stopPropagation();
+        if (event.target !== event.currentTarget) {
+            var tapped = $(this).attr("id");
+        } else {
+            var tapped = event.target.id;
+        }
+        focus = tapped;
     });
 
     $("input").keyup(function(event) {
@@ -308,7 +314,8 @@ $(document).ready(function() {
     });
 
     $("input").blur(function(event) {
-        console.log($(this).attr("id"));
+        let value = document.getElementById(focus).value;
+        updateDesign(focus, value);
     });
 
 });
