@@ -272,7 +272,7 @@ $(document).ready(function() {
         }
         $("#" + focus).blur();
         $("." + section).animate({opacity: 0}, 200, "easeInCubic");
-        if("opacity" in style[section]){
+        if ("opacity" in style[section]) {
             var opacityToChange = style[section]["opacity"];
         } else {
             var opacityToChange = 1;
