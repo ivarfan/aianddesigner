@@ -314,6 +314,7 @@ $(document).ready(function() {
     });
 
     $("input").blur(function(event) {
+        console.log(focus);
         let value = document.getElementById(focus).value;
         console.log(value);
         updateDesign(focus, value);
