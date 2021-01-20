@@ -211,6 +211,7 @@ $(document).ready(function() {
             $("#" + focus + "-chosenicon").css("backgroundColor", $(this).children().not(".dropdownoption").css("backgroundColor"));
             value = color[value];
         }
+        return;
     };
 
     $(document).click(function(event) {
