@@ -201,7 +201,7 @@ $(document).ready(function() {
         }
     };
 
-    $.fn.updateDesign = function(focusInput, selectValue) {
+    function updateDesign(focusInput, selectValue) {
         let items = focusInput.split("-");
         let section = items[0];
         let attribute = items[1];
