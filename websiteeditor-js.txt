@@ -315,6 +315,7 @@ $(document).ready(function() {
 
     $("input").click(function(event) {
         event.stopPropagation();
+        $(".dropdowncontainer").click(false);
         if (event.target !== event.currentTarget) {
             var tapped = $(this).attr("id");
         } else {
@@ -339,6 +340,7 @@ $(document).ready(function() {
             document.getElementById(focus).value = 100;
         }
         updateDesign(focus, value);
+        $(".dropdowncontainer").click(true);
     });
 
 });
