@@ -181,16 +181,16 @@ $(document).ready(function() {
     var hidden = false;
 
     let color = {
-        "Dusty Rose" : "(212, 200, 182, ",
-        "Wheat" : "(184, 146, 106, ",
-        "Blackish" : "(45, 45, 43, ",
-        "Breath" : "(234, 230, 223, ",
-        "Wind" : "(176, 176, 176, ",
-        "Coral" : "(255, 83, 61, ",
-        "Teal": "(15, 143, 143, ",
-        "Olive": "(104, 105, 33, ",
-        "Sea": "(31, 71, 141, ",
-        "Dew": "(145, 179, 183, "
+        "Dusty Rose" : "rgb(212, 200, 182)",
+        "Wheat" : "rgb(184, 146, 106)",
+        "Blackish" : "rgb(45, 45, 43)",
+        "Breath" : "rgb(234, 230, 223)",
+        "Wind" : "rgb(176, 176, 176)",
+        "Coral" : "rgb(255, 83, 61)",
+        "Teal": "rgb(15, 143, 143)",
+        "Olive": "rgb(104, 105, 33)",
+        "Sea": "rgb(31, 71, 141)",
+        "Dew": "rgb(145, 179, 183)"
     };
 
 
@@ -268,18 +268,17 @@ $(document).ready(function() {
         $("#" + focus).find(".dropdownoption").text($(this).text());
         if ((attribute.toLowerCase()).includes("backgroundcolor")) {
             $("#" + focus + "-chosenicon").css("backgroundColor", $(this).children().not(".dropdownoption").css("backgroundColor"));
-            let opacity = style[section]["opacity"];
-            value = "rgba" + color[value] + opacity + ")";
-        }
-        if ((attribute.toLowerCase()).includes("opacity")) {
-            let colorname = style[section]["backgroundColor"];
-            value = "rgba" + color[colorname] + value + ")";
-            attribute = "backgroundColor";
+            value = color[value];
         }
         $("#" + focus).blur();
-        $("." + section).fadeOut(200, "easeInCubic");
+        $("." + section).animate({opacity: 0}, 200, "easeInCubic");
+        if("opacity" in style[section]){
+            var opacityToChange = style[section]["opacity"];
+        } else {
+            var opacityToChange = 1;
+        }
         setTimeout(function() {
-            $("." + section).css(attribute, value).fadeIn(200, "easeOutCubic");
+            $("." + section).css(attribute, value).animate({opacity: opacityToChange}, 200, "easeOutCubic");
         }, 200);
     });
 
