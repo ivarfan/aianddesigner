@@ -178,6 +178,7 @@ $(document).ready(function() {
     $("body").addClass("noselect");
 
     var focus = "";
+    var currentCustomPanel = "Navigation";
     var hidden = false;
 
     let color = {
