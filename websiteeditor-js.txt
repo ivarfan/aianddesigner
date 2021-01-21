@@ -293,12 +293,15 @@ $(document).ready(function() {
             var tapped = event.target.id;
         }
         focus = tapped;
+        $("#" + tapped).attr("tabindex", 0).focus();
         let items = tapped.split("-");
         let section = items[0];
         let attribute = items[1];
         let location = document.querySelector("#" + tapped).getBoundingClientRect();
         let scrolledLocation = document.querySelector("#" + tapped).scrollTop;
         if (virtualKeyBoardUp === true) {
+            console.log(baselineTop);
+            console.log(movedTop);
             $("#" + tapped + "-list").css("left", location.left);
             if (location.top + scrolledLocation + 140 + movedTop - baselineTop >= window.innerHeight) {
                 let difference = location.top + movedTop - baselineTop + scrolledLocation + 170 - window.innerHeight;
@@ -318,7 +321,6 @@ $(document).ready(function() {
                 $("#" + tapped + "-list").css("top", location.top + scrolledLocation - 44);
             }
         }
-        $("#" + tapped).attr("tabindex", 0).focus();
         $("#" + tapped + "-list").animate({
               top: "+=7px",
               opacity: "show"
