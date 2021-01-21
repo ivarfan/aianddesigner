@@ -149,6 +149,7 @@ $(document).ready(function() {
 
     if ($(".customizationwizcontainer").find("input").length > 0) {
         baselineTop = $(".customizationwizcontainer input").first().css("top");
+        console.log(baselineTop);
     }
 
     document.body.style.height = window.innerHeight;
@@ -240,7 +241,6 @@ $(document).ready(function() {
             selectValue = selectValue / 100;
         }
         style[section][attribute] = selectValue;
-        console.log(selectValue);
         $("#" + focus).find(".dropdownoption").text(selectValue);
         if ((attribute.toLowerCase()).includes("backgroundcolor")) {
             selectValue = color[selectValue];
@@ -370,6 +370,7 @@ $(document).ready(function() {
             document.getElementById(focus).value = 100;
         }
         movedTop = $(".customizationwizcontainer input").first().css("top")
+        console.log(movedTop);
         updateDesign(focus, value);
     });
 
