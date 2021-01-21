@@ -302,7 +302,6 @@ $(document).ready(function() {
         if (virtualKeyBoardUp === true) {
             $("#" + tapped + "-list").css("left", location.left);
             if (location.top + 257 + scrolledLocation + 140 >= window.innerHeight) {
-                console.log(2 * (baselineTop - movedTop));
                 let difference = location.top + 257 + scrolledLocation + 170 - window.innerHeight;
                 let topPos = location.top + 257 + scrolledLocation - 44 - difference;
                 $("#" + tapped + "-list").css("top", topPos);
@@ -310,6 +309,7 @@ $(document).ready(function() {
                 $("#" + tapped + "-list").css("top", location.top + 257 + scrolledLocation - 44);
             }
             virtualKeyBoardUp = false;
+        /**/
         } else {
             $("#" + tapped + "-list").css("left", location.left);
             if (location.top + scrolledLocation + 140 >= window.innerHeight) {
