@@ -299,7 +299,7 @@ $(document).ready(function() {
         let attribute = items[1];
         let location = document.querySelector("#" + tapped).getBoundingClientRect();
         let scrolledLocation = document.querySelector("#" + tapped).scrollTop;
-        if (virtualKeyBoardUp === true) {
+        if (virtualKeyBoardUp === false) {
             console.log(baselineTop);
             console.log(movedTop);
             $("#" + tapped + "-list").css("left", location.left);
