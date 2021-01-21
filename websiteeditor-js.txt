@@ -369,7 +369,7 @@ $(document).ready(function() {
             value = 100;
             document.getElementById(focus).value = 100;
         }
-        movedTop = $(".customizationwizcontainer").find("input")[0].css("top")
+        movedTop = $(".customizationwizcontainer input").first().css("top")
         updateDesign(focus, value);
     });
 
