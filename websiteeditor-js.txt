@@ -158,6 +158,19 @@ $(document).ready(function() {
         if (hidden === true) {
             $(".customizationwiz").css("top", $(".customcontainer").height() - 36);
         }
+
+        if (document.hasFocus() === true) {
+            let focusLocation = document.querySelector("#" + focus).getBoundingClientRect();
+            let scrolledLocation = document.querySelector("#" + focus).scrollTop;
+            $("#" + focus + "-list").css("left", focusLocation.left);
+            if (focusLocation.top + scrolledLocation + 140 >= window.innerHeight) {
+                let difference = focusLocation.top + scrolledLocation + 170 - window.innerHeight;
+                let topPos = focusLocation.top + scrolledLocation - 44 - difference;
+                $("#" + focus + "-list").css("top", topPos);
+            } else {
+                $("#" + focus + "-list").css("top", focusLocation.top + scrolledLocation - 44);
+            }
+        } 
     });
 
     $.fn.animateRotate = function(start, angle, duration, easing, complete) {
