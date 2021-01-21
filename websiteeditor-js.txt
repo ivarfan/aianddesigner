@@ -305,10 +305,10 @@ $(document).ready(function() {
             $("#" + tapped + "-list").css("left", location.left);
             if (location.top + scrolledLocation + 140 >= window.innerHeight) {
                 let difference = location.top + scrolledLocation + 170 + 500 - window.innerHeight;
-                let topPos = location.top + scrolledLocation + 500 - 44 - difference;
+                let topPos = location.top + scrolledLocation + 170 - 44 - difference;
                 $("#" + tapped + "-list").css("top", topPos);
             } else {
-                $("#" + tapped + "-list").css("top", location.top + scrolledLocation + 500 - 44);
+                $("#" + tapped + "-list").css("top", location.top + scrolledLocation + 170 - 44);
             }
             virtualKeyBoardUp = false;
         } else {
