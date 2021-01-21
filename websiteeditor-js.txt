@@ -308,7 +308,7 @@ $(document).ready(function() {
                 let topPos = location.top - baselineTop + movedTop + scrolledLocation - 44 - difference;
                 $("#" + tapped + "-list").css("top", topPos);
             } else {
-                $("#" + tapped + "-list").css("top", location.top + baselineTop - movedTop + scrolledLocation - 44);
+                $("#" + tapped + "-list").css("top", location.top - baselineTop + movedTop + scrolledLocation - 44);
             }
             virtualKeyBoardUp = false;
         } else {
