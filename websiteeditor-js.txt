@@ -143,14 +143,6 @@ $(document).ready(function() {
         }
     });
 
-    var baselineTop = 0;
-    var movedTop = 0;
-    var virtualKeyBoardUp = false;
-
-    if ($(".customizationwizcontainer").find("input").length > 0) {
-        baselineTop = document.querySelector(".customizationwizcontainer input").getBoundingClientRect().top;
-    }
-
     document.body.style.height = window.innerHeight;
     document.body.style.width = window.innerWidth;
     let autoHeight = $(".customizationwizcontainer")[0].scrollHeight;
@@ -299,50 +291,14 @@ $(document).ready(function() {
         let attribute = items[1];
         let location = document.querySelector("#" + tapped).getBoundingClientRect();
         let scrolledLocation = document.querySelector("#" + tapped).scrollTop;
-        /*
-        if (virtualKeyBoardUp === true) {
-            $("#" + tapped + "-list").css("left", location.left);
-            if (location.top + (baselineTop - movedTop) + scrolledLocation + 140 >= window.innerHeight) {
-                let difference = location.top + scrolledLocation + 170 - window.innerHeight;
-                let topPos = location.top + (baselineTop - movedTop) + scrolledLocation - 44 - difference;
-                $("#" + tapped + "-list").css("top", topPos);
-            } else {
-                $("#" + tapped + "-list").css("top", location.top + (baselineTop - movedTop) + scrolledLocation - 44);
-            }
-            virtualKeyBoardUp = false;
+        $("#" + tapped + "-list").css("left", location.left);
+        if (location.top + scrolledLocation + 140 >= window.innerHeight) {
+            let difference = location.top + scrolledLocation + 170 - window.innerHeight;
+            let topPos = location.top + scrolledLocation - 44 - difference;
+            $("#" + tapped + "-list").css("top", topPos);
         } else {
-            $("#" + tapped + "-list").css("left", location.left);
-            if (location.top + scrolledLocation + 140 >= window.innerHeight) {
-                let difference = location.top + scrolledLocation + 170 - window.innerHeight;
-                let topPos = location.top + scrolledLocation - 44 - difference;
-                $("#" + tapped + "-list").css("top", topPos);
-            } else {
-                $("#" + tapped + "-list").css("top", location.top + scrolledLocation - 44);
-            }
+            $("#" + tapped + "-list").css("top", location.top + scrolledLocation - 44);
         }
-        */
-        if (virtualKeyBoardUp === true) {
-            console.log(baselineTop - movedTop);
-            $("#" + tapped + "-list").css("left", location.left);
-            if (location.top + 200 + scrolledLocation + 140 >= window.innerHeight) {
-                let difference = location.top + scrolledLocation + 170 - window.innerHeight;
-                let topPos = location.top + 200 + scrolledLocation - 44 - difference;
-                $("#" + tapped + "-list").css("top", topPos);
-            } else {
-                $("#" + tapped + "-list").css("top", location.top + 200 + scrolledLocation - 44);
-            }
-            virtualKeyBoardUp = false;
-        } else {
-            $("#" + tapped + "-list").css("left", location.left);
-            if (location.top + scrolledLocation + 140 >= window.innerHeight) {
-                let difference = location.top + scrolledLocation + 170 - window.innerHeight;
-                let topPos = location.top + scrolledLocation - 44 - difference;
-                $("#" + tapped + "-list").css("top", topPos);
-            } else {
-                $("#" + tapped + "-list").css("top", location.top + scrolledLocation - 44);
-            }
-        }
-        console.log($("#" + tapped + "-list").css("top"));
         $("#" + tapped + "-list").animate({
               top: "+=7px",
               opacity: "show"
@@ -392,7 +348,6 @@ $(document).ready(function() {
             value = 100;
             document.getElementById(focus).value = 100;
         }
-        movedTop = document.querySelector(".customizationwizcontainer input").getBoundingClientRect().top;
         updateDesign(focus, value);
     });
 
