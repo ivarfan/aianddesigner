@@ -310,6 +310,7 @@ $(document).ready(function() {
             } else {
                 $("#" + tapped + "-list").css("top", location.top + baselineTop - movedTop + scrolledLocation - 44);
             }
+            console.log($("#" + tapped + "-list").css("top"));
             virtualKeyBoardUp = false;
         } else {
             $("#" + tapped + "-list").css("left", location.left);
