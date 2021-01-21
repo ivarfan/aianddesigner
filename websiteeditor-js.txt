@@ -148,9 +148,7 @@ $(document).ready(function() {
     var virtualKeyBoardUp = false;
 
     if ($(".customizationwizcontainer").find("input").length > 0) {
-        console.log(document.querySelector(".customizationwizcontainer input").getBoundingClientRect());
-        /*baselineTop = $(".customizationwizcontainer input").first().css("top");
-        console.log(baselineTop);*/
+        baselineTop = document.querySelector(".customizationwizcontainer input").getBoundingClientRect().top;
     }
 
     document.body.style.height = window.innerHeight;
@@ -370,7 +368,7 @@ $(document).ready(function() {
             value = 100;
             document.getElementById(focus).value = 100;
         }
-        movedTop = $(".customizationwizcontainer input").first().css("top")
+        movedTop = document.querySelector(".customizationwizcontainer input").getBoundingClientRect().top;
         console.log(movedTop);
         updateDesign(focus, value);
     });
