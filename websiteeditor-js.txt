@@ -223,7 +223,6 @@ $(document).ready(function() {
             selectValue = selectValue / 100;
         }
         style[section][attribute] = selectValue;
-        console.log(selectValue);
         $("#" + focus).find(".dropdownoption").text(selectValue);
         if ((attribute.toLowerCase()).includes("backgroundcolor")) {
             selectValue = color[selectValue];
