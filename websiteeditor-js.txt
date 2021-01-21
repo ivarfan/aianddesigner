@@ -195,12 +195,6 @@ $(document).ready(function() {
     var currentCustomPanel = "Navigation";
     var hidden = false;
 
-    $( "#nav-backgroundColor-list" ).position({
-        my: "left top",
-        at: "left top",
-        of: "#nav-backgroundColor"
-    });
-
     let color = {
         "Dusty Rose" : "rgb(212, 200, 182)",
         "Wheat" : "rgb(184, 146, 106)",
@@ -298,11 +292,15 @@ $(document).ready(function() {
             $("#" + tapped + "-list").css("top", location.top + scrolledLocation - 44);
         }
         */
+        $( "#nav-backgroundColor-list" ).position({
+            my: "left top",
+            at: "left top",
+            of: "#nav-backgroundColor"
+        });
         $("#" + tapped).attr("tabindex", 0).focus();
-        $("#" + tapped + "-list").animate({
-              top: "+=7px",
+        $("#" + tapped + "-list").animate({ 
               opacity: "show"
-        }, 300, "easeOutCubic");
+        }, 300, "easeOutCubic"); 
         $("#" + tapped + "-arrow").animateRotate(0, 180, 250, "easeInOutCubic");
     });
 
