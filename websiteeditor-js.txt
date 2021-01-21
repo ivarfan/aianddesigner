@@ -155,6 +155,7 @@ $(document).ready(function() {
         } else {
             $(".customizationwizcontainer").css("height", "auto");
         }
+
         if (hidden === true) {
             $(".customizationwiz").css("top", $(".customcontainer").height() - 36);
         }
@@ -193,6 +194,12 @@ $(document).ready(function() {
     var focus = "";
     var currentCustomPanel = "Navigation";
     var hidden = false;
+
+    $( "#nav-backgroundColor-list" ).position({
+        my: "left top",
+        at: "left top",
+        of: "#nav-backgroundColor"
+    });
 
     let color = {
         "Dusty Rose" : "rgb(212, 200, 182)",
@@ -279,6 +286,7 @@ $(document).ready(function() {
         let items = tapped.split("-");
         let section = items[0];
         let attribute = items[1];
+        /*
         let location = document.querySelector("#" + tapped).getBoundingClientRect();
         let scrolledLocation = document.querySelector("#" + tapped).scrollTop;
         $("#" + tapped + "-list").css("left", location.left);
@@ -289,6 +297,7 @@ $(document).ready(function() {
         } else {
             $("#" + tapped + "-list").css("top", location.top + scrolledLocation - 44);
         }
+        */
         $("#" + tapped).attr("tabindex", 0).focus();
         $("#" + tapped + "-list").animate({
               top: "+=7px",
