@@ -310,7 +310,6 @@ $(document).ready(function() {
             } else {
                 $("#" + tapped + "-list").css("top", location.top + baselineTop - movedTop + scrolledLocation - 44);
             }
-            console.log($("#" + tapped + "-list").css("top"));
             virtualKeyBoardUp = false;
         } else {
             $("#" + tapped + "-list").css("left", location.left);
@@ -322,6 +321,7 @@ $(document).ready(function() {
                 $("#" + tapped + "-list").css("top", location.top + scrolledLocation - 44);
             }
         }
+        console.log($("#" + tapped + "-list").css("top"));
         $("#" + tapped + "-list").animate({
               top: "+=7px",
               opacity: "show"
