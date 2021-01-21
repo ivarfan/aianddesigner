@@ -300,16 +300,14 @@ $(document).ready(function() {
         let location = document.querySelector("#" + tapped).getBoundingClientRect();
         let scrolledLocation = document.querySelector("#" + tapped).scrollTop;
         if (virtualKeyBoardUp === true) {
-            console.log(baselineTop);
-            console.log(movedTop);
             $("#" + tapped + "-list").css("left", location.left);
-            if (location.top + 2 * (baselineTop - movedTop) + scrolledLocation + 140 >= window.innerHeight) {
+            if (location.top + 257 + scrolledLocation + 140 >= window.innerHeight) {
                 console.log(2 * (baselineTop - movedTop));
-                let difference = location.top + 2 * (baselineTop - movedTop) + scrolledLocation + 170 - window.innerHeight;
-                let topPos = location.top + 2 * (baselineTop - movedTop) + scrolledLocation - 44 - difference;
+                let difference = location.top + 257 + scrolledLocation + 170 - window.innerHeight;
+                let topPos = location.top + 257 + scrolledLocation - 44 - difference;
                 $("#" + tapped + "-list").css("top", topPos);
             } else {
-                $("#" + tapped + "-list").css("top", location.top + 2 * (baselineTop - movedTop) + scrolledLocation - 44);
+                $("#" + tapped + "-list").css("top", location.top + 257 + scrolledLocation - 44);
             }
             virtualKeyBoardUp = false;
         } else {
