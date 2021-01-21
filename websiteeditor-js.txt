@@ -138,6 +138,7 @@ $(document).ready(function() {
 
     document.body.style.height = window.innerHeight;
     document.body.style.width = window.innerWidth;
+    /*
     let autoHeight = $(".customizationwizcontainer")[0].scrollHeight;
     let location = document.querySelector(".customizationwiz").getBoundingClientRect();
     let newHeight = window.innerHeight - 30 - $(".minimizecontainer").height() - $(".completioncontainer").height();
@@ -145,7 +146,7 @@ $(document).ready(function() {
         $(".customizationwizcontainer").css("height", newHeight);
     } else {
         $(".customizationwizcontainer").css("height", "auto");
-    }
+    }*/
     $(window).resize(function() {
         let autoHeight = $(".customizationwizcontainer")[0].scrollHeight;
         let location = document.querySelector(".customizationwiz").getBoundingClientRect();
