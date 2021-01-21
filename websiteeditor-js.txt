@@ -138,7 +138,6 @@ $(document).ready(function() {
 
     document.body.style.height = window.innerHeight;
     document.body.style.width = window.innerWidth;
-    /*
     let autoHeight = $(".customizationwizcontainer")[0].scrollHeight;
     let location = document.querySelector(".customizationwiz").getBoundingClientRect();
     let newHeight = window.innerHeight - 30 - $(".minimizecontainer").height() - $(".completioncontainer").height();
@@ -146,7 +145,7 @@ $(document).ready(function() {
         $(".customizationwizcontainer").css("height", newHeight);
     } else {
         $(".customizationwizcontainer").css("height", "auto");
-    }*/
+    }
     $(window).resize(function() {
         let autoHeight = $(".customizationwizcontainer")[0].scrollHeight;
         let location = document.querySelector(".customizationwiz").getBoundingClientRect();
@@ -281,7 +280,6 @@ $(document).ready(function() {
         let items = tapped.split("-");
         let section = items[0];
         let attribute = items[1];
-        /*
         let location = document.querySelector("#" + tapped).getBoundingClientRect();
         let scrolledLocation = document.querySelector("#" + tapped).scrollTop;
         $("#" + tapped + "-list").css("left", location.left);
@@ -292,16 +290,11 @@ $(document).ready(function() {
         } else {
             $("#" + tapped + "-list").css("top", location.top + scrolledLocation - 44);
         }
-        */
-        $( "#nav-backgroundColor-list" ).position({
-            my: "left top",
-            at: "left top",
-            of: "#nav-backgroundColor"
-        });
         $("#" + tapped).attr("tabindex", 0).focus();
-        $("#" + tapped + "-list").animate({ 
+        $("#" + tapped + "-list").animate({
+              top: "+=7px",
               opacity: "show"
-        }, 300, "easeOutCubic"); 
+        }, 300, "easeOutCubic");
         $("#" + tapped + "-arrow").animateRotate(0, 180, 250, "easeInOutCubic");
     });
 
