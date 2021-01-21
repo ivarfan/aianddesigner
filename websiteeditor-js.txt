@@ -159,7 +159,7 @@ $(document).ready(function() {
             $(".customizationwiz").css("top", $(".customcontainer").height() - 36);
         }
 
-        if (document.hasFocus() === true) {
+        if ($(".dropdownlist").css("display") === "block") {
             let focusLocation = document.querySelector("#" + focus).getBoundingClientRect();
             let scrolledLocation = document.querySelector("#" + focus).scrollTop;
             $("#" + focus + "-list").css("left", focusLocation.left);
