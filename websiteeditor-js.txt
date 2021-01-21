@@ -371,7 +371,6 @@ $(document).ready(function() {
             document.getElementById(focus).value = 100;
         }
         movedTop = document.querySelector(".customizationwizcontainer input").getBoundingClientRect().top;
-        console.log(movedTop);
         updateDesign(focus, value);
     });
 
