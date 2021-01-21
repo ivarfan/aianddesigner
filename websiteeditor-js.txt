@@ -148,8 +148,9 @@ $(document).ready(function() {
     var virtualKeyBoardUp = false;
 
     if ($(".customizationwizcontainer").find("input").length > 0) {
-        baselineTop = $(".customizationwizcontainer input").first().css("top");
-        console.log(baselineTop);
+        console.log(document.querySelector(".customizationwizcontainer input").getBoundingClientRect());
+        /*baselineTop = $(".customizationwizcontainer input").first().css("top");
+        console.log(baselineTop);*/
     }
 
     document.body.style.height = window.innerHeight;
