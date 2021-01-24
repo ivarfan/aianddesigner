@@ -57,7 +57,7 @@ input[type="number"] {
     z-index: 2;
     display: flex;
     overflow: visible;
-    width: 180px;
+    width: 100%;
     padding-top: 12px;
     padding-right: 36px;
     padding-bottom: 12px;
