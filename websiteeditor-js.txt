@@ -203,7 +203,7 @@ $(document).ready(function() {
         "Wind" : "rgb(176, 176, 176)",
         "Coral" : "rgb(255, 83, 61)",
         "Teal": "rgb(15, 143, 143)",
-        "Olive": "rgb(104, 105, 33)",
+        "Olive": "rgb(133, 160, 53)",
         "Sea": "rgb(31, 71, 141)",
         "Dew": "rgb(145, 179, 183)"
     };
