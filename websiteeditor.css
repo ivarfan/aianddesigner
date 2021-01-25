@@ -102,6 +102,14 @@ input[type="number"]:focus {
     box-shadow: 0 0 0 5px hsla(214, 100.00%, 42.00%, 0.28);
 }
 
+select {
+  font-family: Open Sans;
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 700;
+}
+}
+
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
