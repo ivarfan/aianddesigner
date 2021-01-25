@@ -119,6 +119,7 @@ select {
     padding-left: 4px;
     margin-left: 4px;
     background-image: url("https://uploads-ssl.webflow.com/5fcfc9bfdcaa86e2637b89b9/60021e12d5625c89055bca90_DropdownIcon(Thick).svg") no-repeat right;
+    background-size: 16px 10px;
 }
 
 select option {
