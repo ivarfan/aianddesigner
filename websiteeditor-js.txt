@@ -208,6 +208,15 @@ $(document).ready(function() {
         "Dew": "rgb(145, 179, 183)"
     };
 
+    let titleLength = {
+        "Navigation" : 132,
+        "Logo" : 57,
+        "Menu" : 69,
+        "Title" : 54,
+        "Button" : 84,
+        "Background" : 144
+    };
+
 
     let style = {
         "nav" : {
@@ -344,7 +353,6 @@ $(document).ready(function() {
 
     $("#CurrentPanel").click(function(event) {
         event.stopPropagation();
-        console.log($("#CurrentPanel").text().width());
     });
 
 });
