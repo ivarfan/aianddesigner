@@ -103,10 +103,14 @@ input[type="number"]:focus {
 }
 
 select {
-  font-family: Open Sans;
-  font-size: 24px;
-  line-height: 34px;
-  font-weight: 700;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    font-family: Open Sans;
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 700;
+    border-radius: 12px;
 }
 
 select option {
