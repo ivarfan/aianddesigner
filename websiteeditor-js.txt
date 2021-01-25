@@ -342,8 +342,9 @@ $(document).ready(function() {
         updateDesign(focus, value);
     });
 
-    $("select").click(function(event) {
+    $("#CurrentPanel").click(function(event) {
         event.stopPropagation();
+        console.log($("#CurrentPanel").text().width());
     });
 
 });
