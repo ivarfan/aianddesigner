@@ -355,4 +355,9 @@ $(document).ready(function() {
         event.stopPropagation();
     });
 
+    $("#CurrentPanel").blur(function(event) {
+        event.stopPropagation();
+        console.log($(this).text());
+    });
+
 });
