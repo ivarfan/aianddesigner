@@ -111,7 +111,9 @@ select {
     line-height: 34px;
     font-weight: 700;
     border-radius: 12px;
-    outline: none;
+    border:0px;
+    outline:0px;
+}
 }
 
 select option {
