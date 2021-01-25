@@ -122,8 +122,7 @@ select {
     background-size: 16px 10px;
 }
 
-select option {
-  font-weight:normal;
+option {
   font-size: 14px;
 }
 
