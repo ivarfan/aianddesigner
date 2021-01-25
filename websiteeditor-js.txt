@@ -342,4 +342,8 @@ $(document).ready(function() {
         updateDesign(focus, value);
     });
 
+    $("select").click(function(event) {
+        event.stopPropagation();
+    });
+
 });
