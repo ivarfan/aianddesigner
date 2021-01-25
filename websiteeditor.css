@@ -118,7 +118,7 @@ select {
     padding-bottom: 8px;
     padding-left: 4px;
     margin-left: 4px;
-    background: url("<i class="material-icons">face</i>") no-repeat right #ddd;
+    background: url("https://uploads-ssl.webflow.com/5fcfc9bfdcaa86e2637b89b9/60021e12d5625c89055bca90_DropdownIcon(Thick).svg") no-repeat right #ddd;
 }
 
 select option {
