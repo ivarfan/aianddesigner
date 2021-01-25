@@ -357,7 +357,7 @@ $(document).ready(function() {
 
     $("#CurrentPanel").blur(function(event) {
         event.stopPropagation();
-        console.log($(this).text());
+        console.log($(this).val());
     });
 
 });
