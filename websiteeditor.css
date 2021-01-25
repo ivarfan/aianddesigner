@@ -108,6 +108,10 @@ select {
   line-height: 34px;
   font-weight: 700;
 }
+
+select option {
+  font-weight:normal;
+  font-size: 14px;
 }
 
 .noselect {
