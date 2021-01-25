@@ -103,7 +103,6 @@ input[type="number"]:focus {
 }
 
 select {
-    display: inline;
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
@@ -119,6 +118,7 @@ select {
     padding-bottom: 8px;
     padding-left: 4px;
     margin-left: 4px;
+    background-image: url("https://uploads-ssl.webflow.com/5fcfc9bfdcaa86e2637b89b9/60021e12d5625c89055bca90_DropdownIcon(Thick).svg") no-repeat right;
 }
 
 select option {
