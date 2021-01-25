@@ -113,14 +113,14 @@ select {
     border-radius: 12px;
     border:0px;
     outline:0px;
-    width: 176px;
+    width: 168px;
     padding-top: 8px;
     padding-bottom: 8px;
     padding-left: 4px;
     margin-left: 4px;
     background: url("https://uploads-ssl.webflow.com/5fcfc9bfdcaa86e2637b89b9/60021e12d5625c89055bca90_DropdownIcon(Thick).svg") no-repeat right #fff;
     background-size: 16px 10px;
-    background-position: 152px 50%;
+    background-position: 144px 50%;
 }
 
 option {
