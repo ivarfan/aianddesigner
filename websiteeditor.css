@@ -118,6 +118,7 @@ select {
     padding-bottom: 8px;
     padding-left: 4px;
     margin-left: 4px;
+    background: url("<i class="material-icons">face</i>") no-repeat right #ddd;
 }
 
 select option {
