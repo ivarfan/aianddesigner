@@ -273,10 +273,11 @@ $(document).ready(function() {
             var tapped = event.target.id;
         }
         focus = tapped;
-        let items = tapped.split("-");
-        let section = items[0];
-        let attribute = items[1];
-        let scrolledLocation = document.querySelector("#" + tapped).scrollTop;
+        if (tapped.includes("-")) {
+            let items = tapped.split("-");
+            let section = items[0];
+            let attribute = items[1];
+        }
         $("#" + tapped).attr("tabindex", 0).focus();
         $("#" + tapped + "-list").animate({
               top: "+=7px",
