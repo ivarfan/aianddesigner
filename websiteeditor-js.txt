@@ -289,7 +289,9 @@ $(document).ready(function() {
     $(".dropdownoptioncontainer").click(function(event) {
         event.stopPropagation();
         let value = $(this).text();
-        updateDesign(focus, value);
+        if (focus.includes("-")) {
+            updateDesign(focus, value);
+        }
         $("#" + focus).blur();
     });
 
