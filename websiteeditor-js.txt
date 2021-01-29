@@ -159,19 +159,6 @@ $(document).ready(function() {
         if (hidden === true) {
             $(".customizationwiz").css("top", $(".customcontainer").height() - 36);
         }
-
-        if ($(".dropdownlist." + currentCustomPanel.toLowerCase()).css("display") === "block") {
-            let focusLocation = document.querySelector("#" + focus).getBoundingClientRect();
-            let scrolledLocation = document.querySelector("#" + focus).scrollTop;
-            $("#" + focus + "-list").css("left", focusLocation.left);
-            if (focusLocation.top + scrolledLocation + 140 >= window.innerHeight) {
-                let difference = focusLocation.top + scrolledLocation + 170 - window.innerHeight;
-                let topPos = focusLocation.top + scrolledLocation - 44 - difference;
-                $("#" + focus + "-list").css("top", topPos);
-            } else {
-                $("#" + focus + "-list").css("top", focusLocation.top + scrolledLocation - 44);
-            }
-        } 
     });
 
     $.fn.animateRotate = function(start, angle, duration, easing, complete) {
@@ -289,16 +276,7 @@ $(document).ready(function() {
         let items = tapped.split("-");
         let section = items[0];
         let attribute = items[1];
-        let location = document.querySelector("#" + tapped).getBoundingClientRect();
         let scrolledLocation = document.querySelector("#" + tapped).scrollTop;
-        $("#" + tapped + "-list").css("left", location.left);
-        if (location.top + scrolledLocation + 140 >= window.innerHeight) {
-            let difference = location.top + scrolledLocation + 170 - window.innerHeight;
-            let topPos = location.top + scrolledLocation - 44 - difference;
-            $("#" + tapped + "-list").css("top", topPos);
-        } else {
-            $("#" + tapped + "-list").css("top", location.top + scrolledLocation - 44);
-        }
         $("#" + tapped).attr("tabindex", 0).focus();
         $("#" + tapped + "-list").animate({
               top: "+=7px",
@@ -349,15 +327,6 @@ $(document).ready(function() {
             document.getElementById(focus).value = 100;
         }
         updateDesign(focus, value);
-    });
-
-    $("#CurrentPanel").click(function(event) {
-        event.stopPropagation();
-    });
-
-    $("#CurrentPanel").blur(function(event) {
-        event.stopPropagation();
-        console.log($(this).val());
     });
 
 });
