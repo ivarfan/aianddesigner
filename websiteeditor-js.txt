@@ -293,7 +293,7 @@ $(document).ready(function() {
             updateDesign(focus, value);
         } else {
             console.log(value);
-            console.log("#" + focus);
+            console.log($("#" + focus).find(".dropdownoption").text());
             $("#" + focus).find(".dropdownoption").text(value);
         }
         $("#" + focus).blur();
