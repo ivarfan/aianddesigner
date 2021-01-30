@@ -213,27 +213,29 @@ $(document).ready(function() {
     };
 
     function updateDesign(focusInput, selectValue) {
-        let items = focusInput.split("-");
-        let section = items[0];
-        let attribute = items[1];
-        if (attribute === "opacity") {
-            selectValue = selectValue / 100;
+        if (focus.includes("-")) {
+            let items = focusInput.split("-");
+            let section = items[0];
+            let attribute = items[1];
+            if (attribute === "opacity") {
+                selectValue = selectValue / 100;
+            }
+            style[section][attribute] = selectValue;
+            if ((attribute.toLowerCase()).includes("backgroundcolor")) {
+                selectValue = color[selectValue];
+                $("#" + focus + "-chosenicon").css("backgroundColor", selectValue);
+            }
+            $("." + section).animate({opacity: 0}, 200, "easeInCubic");
+            if ("opacity" in style[section]) {
+                var opacityToChange = style[section]["opacity"];
+            } else {
+                var opacityToChange = 1;
+            }
+            setTimeout(function() {
+                $("." + section).css(attribute, selectValue).animate({opacity: opacityToChange}, 200, "easeOutCubic");
+            }, 200);
         }
-        style[section][attribute] = selectValue;
         $("#" + focus).find(".dropdownoption").text(selectValue);
-        if ((attribute.toLowerCase()).includes("backgroundcolor")) {
-            selectValue = color[selectValue];
-            $("#" + focus + "-chosenicon").css("backgroundColor", selectValue);
-        }
-        $("." + section).animate({opacity: 0}, 200, "easeInCubic");
-        if ("opacity" in style[section]) {
-            var opacityToChange = style[section]["opacity"];
-        } else {
-            var opacityToChange = 1;
-        }
-        setTimeout(function() {
-            $("." + section).css(attribute, selectValue).animate({opacity: opacityToChange}, 200, "easeOutCubic");
-        }, 200);
     };
 
     $(document).click(function(event) {
