@@ -292,6 +292,7 @@ $(document).ready(function() {
         if (focus.includes("-")) {
             updateDesign(focus, value);
         } else {
+            console.log(value);
             $("#" + focus).find(".dropdownoption").text(value);
         }
         $("#" + focus).blur();
