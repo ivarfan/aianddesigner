@@ -234,7 +234,7 @@ $(document).ready(function() {
         setTimeout(function() {
             $("." + section).css(attribute, selectValue).animate({opacity: opacityToChange}, 200, "easeOutCubic");
         }, 200);
-        return;
+        $("#" + focus).blur();
     };
 
     $(document).click(function(event) {
@@ -293,8 +293,8 @@ $(document).ready(function() {
             updateDesign(focus, value);
         } else {
             $("#" + focus).find(".dropdownoption").text(value);
+            $("#" + focus).blur();
         }
-        $("#" + focus).blur();
     });
 
     $(".dropdowncontainer").blur(function(event) {
