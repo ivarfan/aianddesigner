@@ -221,6 +221,7 @@ $(document).ready(function() {
                 selectValue = selectValue / 100;
             }
             style[section][attribute] = selectValue;
+            $("#" + focus).find(".dropdownoption").text(selectValue);
             if ((attribute.toLowerCase()).includes("backgroundcolor")) {
                 selectValue = color[selectValue];
                 $("#" + focus + "-chosenicon").css("backgroundColor", selectValue);
@@ -234,8 +235,9 @@ $(document).ready(function() {
             setTimeout(function() {
                 $("." + section).css(attribute, selectValue).animate({opacity: opacityToChange}, 200, "easeOutCubic");
             }, 200);
+        } else {
+            $("#" + focus).find(".dropdownoption").text(selectValue);
         }
-        $("#" + focus).find(".dropdownoption").text(selectValue);
     };
 
     $(document).click(function(event) {
