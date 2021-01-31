@@ -4,10 +4,6 @@
     box-shadow: 0 0 0 5px hsla(214, 100.00%, 42.00%, 0.28);
 }
 
-body {
-    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
-}
-
 @media (hover: hover) and (pointer: fine) {
     .dropdowncontainer:not(:focus):hover {  
         border-top-color: #7d7d7d;
