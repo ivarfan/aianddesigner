@@ -166,9 +166,10 @@ $(document).ready(function() {
     });
 
     window.addEventListener("orientationchange", function() {
+        $("body").toggleClass(".scaling");
         setTimeout(function() {
-            $("body").css("transform", "scale(1.5)").css("transform", "scale(1)");
-        }, 1000);
+            $("body").toggleClass(".scaling");
+        }, 500);
     }, false);
 
     $.fn.animateRotate = function(start, angle, duration, easing, complete) {

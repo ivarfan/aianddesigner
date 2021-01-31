@@ -1,3 +1,12 @@
+body {
+    transform: scale(1);
+    transition: all 0.5s;
+}
+
+body.scaling {
+    transform: scale(1.2);
+}
+
 *:focus {
     outline: none;
     border-color: #005dd6;
