@@ -294,7 +294,6 @@ $(document).ready(function() {
             }, 100, "easeOutCubic");
             setTimeout(function() {
                 $("#" + tapped + "-list-center").animate({
-                  top: "+=7px",
                   opacity: "show"
                 }, 300, "easeOutCubic");
             }, 100);
@@ -318,7 +317,6 @@ $(document).ready(function() {
         }
         if ($("#" + focus + "-list-center").is(":visible")) {
             $("#" + focus + "-list-center").animate({
-              top: "-=7px",
               opacity: "hide",
               height: "hide"
             }, 300, "easeOutCubic");
