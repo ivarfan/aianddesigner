@@ -164,6 +164,18 @@ $(document).ready(function() {
         }
     });
 
+    document.addEventListener('orientationchange', () => {
+      document.documentElement.style.height = `initial`;
+      setTimeout(() => {
+        document.documentElement.style.height = `100%`;
+          setTimeout(() => {
+            // this line prevents the content
+            // from hiding behind the address bar
+            window.scrollTo(0, 1);
+          }, 500);
+      }, 500);
+    });
+
     $.fn.animateRotate = function(start, angle, duration, easing, complete) {
       var args = $.speed(duration, easing, complete);
       var step = args.step;
