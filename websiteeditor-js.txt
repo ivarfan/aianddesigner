@@ -170,7 +170,7 @@ $(document).ready(function() {
         setTimeout(function() {
             $("body").toggleClass(".scaling");
         }, 500);
-    }, false);
+    });
 
     $.fn.animateRotate = function(start, angle, duration, easing, complete) {
       var args = $.speed(duration, easing, complete);
