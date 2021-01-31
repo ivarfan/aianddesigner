@@ -142,14 +142,12 @@ $(document).ready(function() {
         if (location.top < 10 || newHeight < autoHeight) {
             $(".customizationwizcontainer").css("height", newHeight);
             $(".customizationwizcontainer").css("overflow", "scroll");
-            $(".dropdownlistcentercontainer").css("height", window.innerHeight);
-            $(".dropdownlistcentercontainer").css("width", window.innerWidth);
         } else {
             $(".customizationwizcontainer").css("height", "auto");
             $(".customizationwizcontainer").css("overflow", "visible");
-            $(".dropdownlistcentercontainer").css("height", window.innerHeight);
-            $(".dropdownlistcentercontainer").css("width", window.innerWidth);
         }
+        $(".dropdownlistcentercontainer").css("height", window.innerHeight);
+        $(".dropdownlistcentercontainer").css("width", window.innerWidth);
 
     }
 
