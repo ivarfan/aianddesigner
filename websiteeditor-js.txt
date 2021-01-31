@@ -143,6 +143,8 @@ $(document).ready(function() {
         if (location.top < 10 || newHeight < autoHeight) {
             $(".customizationwizcontainer").css("height", newHeight);
             $(".customizationwizcontainer").css("overflow", "scroll");
+            $(".dropdownlistcentercontainer").css("height", window.innerHeight);
+            $(".dropdownlistcentercontainer").css("width", window.innerWidth);
         } else {
             $(".customizationwizcontainer").css("height", "auto");
             $(".customizationwizcontainer").css("overflow", "visible");
@@ -162,18 +164,6 @@ $(document).ready(function() {
         if (hidden === true) {
             $(".customizationwiz").css("top", $(".customcontainer").height() - 36);
         }
-    });
-
-    document.addEventListener('orientationchange', () => {
-      document.documentElement.style.height = `initial`;
-      setTimeout(() => {
-        document.documentElement.style.height = `100%`;
-          setTimeout(() => {
-            // this line prevents the content
-            // from hiding behind the address bar
-            window.scrollTo(0, 1);
-          }, 500);
-      }, 500);
     });
 
     $.fn.animateRotate = function(start, angle, duration, easing, complete) {
