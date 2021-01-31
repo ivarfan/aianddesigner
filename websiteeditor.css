@@ -102,31 +102,6 @@ input[type="number"]:focus {
     box-shadow: 0 0 0 5px hsla(214, 100.00%, 42.00%, 0.28);
 }
 
-select {
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
-    font-family: Open Sans;
-    font-size: 24px;
-    line-height: 34px;
-    font-weight: 700;
-    border-radius: 12px;
-    border:0px;
-    outline:0px;
-    width: 168px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 4px;
-    margin-left: 4px;
-    background: url("https://uploads-ssl.webflow.com/5fcfc9bfdcaa86e2637b89b9/60021e12d5625c89055bca90_DropdownIcon(Thick).svg") no-repeat right #fff;
-    background-size: 16px 10px;
-    background-position: 144px 50%;
-}
-
-option {
-  font-size: 14px;
-}
-
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
