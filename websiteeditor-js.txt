@@ -293,7 +293,7 @@ $(document).ready(function() {
               opacity: "show"
             }, 100, "easeOutCubic");
             setTimeout(function() {
-                $("#" + tapped + "-list").animate({
+                $("#" + tapped + "-list-center").animate({
                   top: "+=7px",
                   opacity: "show"
                 }, 300, "easeOutCubic");
