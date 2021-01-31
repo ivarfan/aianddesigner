@@ -165,6 +165,12 @@ $(document).ready(function() {
         }
     });
 
+    window.addEventListener("orientationchange", function() {
+        setTimeout(function() {
+            $("body").css("transform", "scale(1.5)").css("transform", "scale(1)");
+        }, 200);
+    }, false);
+
     $.fn.animateRotate = function(start, angle, duration, easing, complete) {
       var args = $.speed(duration, easing, complete);
       var step = args.step;
