@@ -136,19 +136,7 @@ $(document).ready(function() {
         }
     });
 
-    document.body.style.height = window.innerHeight;
-    document.body.style.width = window.innerWidth;
-    let autoHeight = $(".customizationwizcontainer")[0].scrollHeight;
-    let location = document.querySelector(".customizationwiz").getBoundingClientRect();
-    let newHeight = window.innerHeight - 30 - $(".minimizecontainer").height() - $(".completioncontainer").height();
-    if (location.top < 10 || newHeight < autoHeight) {
-        $(".customizationwizcontainer").css("height", newHeight);
-        $(".customizationwizcontainer").css("overflow", "scroll");
-    } else {
-        $(".customizationwizcontainer").css("height", "auto");
-        $(".customizationwizcontainer").css("overflow", "visible");
-    }
-    $(window).resize(function() {
+    function resizeCustomWiz() {
         let autoHeight = $(".customizationwizcontainer")[0].scrollHeight;
         let location = document.querySelector(".customizationwiz").getBoundingClientRect();
         let newHeight = window.innerHeight - 30 - $(".minimizecontainer").height() - $(".completioncontainer").height();
@@ -159,6 +147,15 @@ $(document).ready(function() {
             $(".customizationwizcontainer").css("height", "auto");
             $(".customizationwizcontainer").css("overflow", "visible");
         }
+
+    }
+
+    document.body.style.height = window.innerHeight;
+    document.body.style.width = window.innerWidth;
+    resizeCustomWiz();
+
+    $(window).resize(function() {
+        resizeCustomWiz();
 
         if (hidden === true) {
             $(".customizationwiz").css("top", $(".customcontainer").height() - 36);
