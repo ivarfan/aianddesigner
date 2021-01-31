@@ -167,9 +167,8 @@ $(document).ready(function() {
 
     window.addEventListener("orientationchange", function() {
         setTimeout(function() {
-            document.body.style.height = window.innerHeight;
-            document.body.style.width = window.innerWidth;
-        }, 200);
+            $("body").css("transform", "scale(1.5)").css("transform", "scale(1)");
+        }, 1000);
     }, false);
 
     $.fn.animateRotate = function(start, angle, duration, easing, complete) {
