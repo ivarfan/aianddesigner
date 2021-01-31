@@ -283,10 +283,22 @@ $(document).ready(function() {
             let attribute = items[1];
         }
         $("#" + tapped).attr("tabindex", 0).focus();
-        $("#" + tapped + "-list").animate({
+        if ($(".customizationwizcontainer").css("overflow") === "visible") {
+            $("#" + tapped + "-list").animate({
               top: "+=7px",
               opacity: "show"
-        }, 300, "easeOutCubic");
+            }, 300, "easeOutCubic");
+        } else {
+            $(".dropdownlistcentercontainer").animate({
+              opacity: "show"
+            }, 100, "easeOutCubic");
+            setTimeout(function() {
+                $("#" + tapped + "-list").animate({
+                  top: "+=7px",
+                  opacity: "show"
+                }, 300, "easeOutCubic");
+            }, 100);
+        }
         $("#" + tapped + "-arrow").animateRotate(0, 180, 250, "easeInOutCubic");
     });
 
