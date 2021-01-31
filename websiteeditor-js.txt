@@ -154,8 +154,10 @@ $(document).ready(function() {
         let newHeight = window.innerHeight - 30 - $(".minimizecontainer").height() - $(".completioncontainer").height();
         if (location.top < 10 || newHeight < autoHeight) {
             $(".customizationwizcontainer").css("height", newHeight);
+            $(".customizationwizcontainer").css("overflow", "scroll");
         } else {
             $(".customizationwizcontainer").css("height", "auto");
+            $(".customizationwizcontainer").css("overflow", "visible");
         }
 
         if (hidden === true) {
