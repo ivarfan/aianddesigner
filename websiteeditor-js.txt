@@ -155,6 +155,8 @@ $(document).ready(function() {
     resizeCustomWiz();
 
     $(window).resize(function() {
+        document.body.style.height = window.innerHeight;
+        document.body.style.width = window.innerWidth;
         resizeCustomWiz();
 
         if (hidden === true) {
