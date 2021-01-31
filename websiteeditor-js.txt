@@ -293,10 +293,13 @@ $(document).ready(function() {
               opacity: "show"
             }, 100, "easeOutCubic");
             setTimeout(function() {
+                $(".dropdownlistcentercontainer").css("display", "flex");
+            }, 100);
+            setTimeout(function() {
                 $("#" + tapped + "-list-center").animate({
                   opacity: "show"
                 }, 300, "easeOutCubic");
-            }, 100);
+            }, 101);
         }
         $("#" + tapped + "-arrow").animateRotate(0, 180, 250, "easeInOutCubic");
     });
