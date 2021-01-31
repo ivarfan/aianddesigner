@@ -309,11 +309,23 @@ $(document).ready(function() {
     });
 
     $(".dropdowncontainer").blur(function(event) {
-        $("#" + focus + "-list").animate({
+        if ($("#" + focus + "-list").is(":visible")) {
+            $("#" + focus + "-list").animate({
               top: "-=7px",
               opacity: "hide",
               height: "hide"
-        }, 300, "easeOutCubic");
+            }, 300, "easeOutCubic");
+        }
+        if ($("#" + focus + "-list-center").is(":visible")) {
+            $("#" + focus + "-list-center").animate({
+              top: "-=7px",
+              opacity: "hide",
+              height: "hide"
+            }, 300, "easeOutCubic");
+            $(".dropdownlistcentercontainer").animate({
+              opacity: "show"
+            }, 100, "easeOutCubic");
+        }
         $("#" + focus + "-arrow").animateRotate(180, 360, 250, "easeInOutCubic");
     });
 
