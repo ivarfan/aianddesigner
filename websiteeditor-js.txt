@@ -147,6 +147,8 @@ $(document).ready(function() {
         } else {
             $(".customizationwizcontainer").css("height", "auto");
             $(".customizationwizcontainer").css("overflow", "visible");
+            $(".dropdownlistcentercontainer").css("height", window.innerHeight);
+            $(".dropdownlistcentercontainer").css("width", window.innerWidth);
         }
 
     }
