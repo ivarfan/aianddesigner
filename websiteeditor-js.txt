@@ -323,7 +323,7 @@ $(document).ready(function() {
               height: "hide"
             }, 300, "easeOutCubic");
             $(".dropdownlistcentercontainer").animate({
-              opacity: "show"
+              opacity: "hide"
             }, 100, "easeOutCubic");
         }
         $("#" + focus + "-arrow").animateRotate(180, 360, 250, "easeInOutCubic");
