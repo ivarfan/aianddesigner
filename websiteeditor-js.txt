@@ -167,7 +167,8 @@ $(document).ready(function() {
 
     window.addEventListener("orientationchange", function() {
         setTimeout(function() {
-            $("body").css("transform", "scale(1.5)").css("transform", "scale(1)");
+            document.body.style.height = window.innerHeight;
+            document.body.style.width = window.innerWidth;
         }, 200);
     }, false);
 
