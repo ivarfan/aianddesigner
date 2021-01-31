@@ -4,7 +4,7 @@
     box-shadow: 0 0 0 5px hsla(214, 100.00%, 42.00%, 0.28);
 }
 
-.body {
+body {
     padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
