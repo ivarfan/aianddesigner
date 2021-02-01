@@ -130,7 +130,7 @@ input[type="number"]:focus {
 }
 
 @media screen and (max-width: 767px) {
-    .coloroption:small {
+    .coloroption {
         width: 44px;
         height: 44px;
         border-radius: 22px;
