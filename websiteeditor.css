@@ -44,6 +44,9 @@ body.scaling {
         border-left-color: #7d7d7d;
     }
 
+}
+
+@media (hover: none) and (pointer: coarse) {
     .coloroption {
         width: 44px;
         height: 44px;
@@ -57,7 +60,6 @@ body.scaling {
     .dropdownoption.currentsectiontitle {
         font-size: 22px;
     }
-
 }
 
 .dropdownlist.smallscreen {
