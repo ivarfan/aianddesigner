@@ -54,6 +54,10 @@ body.scaling {
         width: 248px;
     }
 
+    .dropdownoption.currentsectiontitle {
+        font-size: 22px;
+    }
+
 }
 
 .dropdownlist.smallscreen {
