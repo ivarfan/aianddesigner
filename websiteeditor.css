@@ -119,12 +119,6 @@ input[type="number"]:focus {
     box-shadow: 0 0 0 5px hsla(214, 100.00%, 42.00%, 0.28);
 }
 
-.coloroption:small {
-    width: 44px;
-    height: 44px;
-    border-radius: 22px;
-}
-
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -133,4 +127,12 @@ input[type="number"]:focus {
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
+}
+
+@media screen and (max-width: 767px) {
+    .coloroption:small {
+        width: 44px;
+        height: 44px;
+        border-radius: 22px;
+    }
 }
