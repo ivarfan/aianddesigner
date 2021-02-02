@@ -196,7 +196,9 @@ $(document).ready(function() {
         "Teal": "rgb(15, 143, 143)",
         "Olive": "rgb(133, 160, 53)",
         "Sea": "rgb(31, 71, 141)",
-        "Dew": "rgb(145, 179, 183)"
+        "Dew": "rgb(145, 179, 183)",
+        "Citrus": "rgb(247, 195, 49)",
+        "Peach": "rgb(243, 170, 167)"
     };
 
     let titleLength = {
